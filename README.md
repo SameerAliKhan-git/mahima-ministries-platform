@@ -1,58 +1,111 @@
-# Non-Profit Donation Platform
+# 🙏 Mahima Ministries Platform
 
-> 🎉 **STATUS: 95% COMPLETE - READY TO LAUNCH!**
-> 
-> ✅ Frontend: **RUNNING** at http://localhost:5173  
-> ⏸️ Backend: **READY** (needs database - 2 min setup)  
-> 🔥 **[Quick Start Guide →](./ACTION_REQUIRED.md)**
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20-green?logo=node.js)](https://nodejs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql)](https://www.postgresql.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A comprehensive, secure, and user-friendly full-stack web application for non-profit organizations to manage donations, donors, and partnerships.
+A comprehensive full-stack donation platform built for **Mahima Ministries** to support underprivileged communities in India. Features include online donations, partnership applications, contact management, and complete Indian NGO compliance (80G, 12A, FCRA).
 
-## 🚀 Quick Start (2 minutes)
-
-**Everything is built! Just connect a database:**
-
-1. **Get FREE database:** Visit [neon.tech](https://neon.tech) (no credit card)
-2. **Update environment:** Copy connection string to `backend\.env`
-3. **Run setup:** `.\quick-setup.ps1`
-4. **Done!** Visit http://localhost:5173
-
-**[📖 Detailed Instructions →](./LAUNCH_INSTRUCTIONS.md)** | **[🎊 Full Summary →](./MISSION_COMPLETE.md)**
+**🌐 Live Demo**: [Coming Soon]  
+**📧 Contact**: mahimaministriesindia@gmail.com
 
 ---
 
-## 🎯 Features
+## ✨ Key Features
 
-- **Secure Donation Processing**: One-time and recurring donations with multiple payment methods
-- **Donor Portal**: Personal dashboard with donation history and tax receipts
-- **Admin Dashboard**: Comprehensive analytics, donor management, and reporting
-- **Partnership Forms**: Corporate and institutional partnership applications
-- **Email Notifications**: Automated transactional emails and receipts
-- **Mobile-Responsive**: Optimized for all devices
-- **SEO-Optimized**: Complete with sitemap, robots.txt, and structured data
+### 🎯 For Donors
+- � Secure donation system with DANAMOJO integration
+- 🔄 Recurring donations (monthly/quarterly/annually)
+- 📧 Automated 80G tax receipt generation
+- 📊 Personal donor dashboard
+- 📱 Fully mobile-responsive design
 
-## 🏗️ Technology Stack
+### 🤝 For Organizations
+- 📝 Partnership application system
+- 📞 Multi-channel contact forms (Email, Phone, WhatsApp)
+- 🌍 International phone input (201 countries with flags)
+- 📈 Campaign and donor management
+- 👥 Admin dashboard with analytics
 
-### Frontend
-- **Framework**: React 18 + TypeScript
-- **Build Tool**: Vite 7
-- **Styling**: Tailwind CSS 3.4
-- **UI Components**: shadcn/ui (Radix UI)
-- **Routing**: React Router DOM
-- **State Management**: Zustand
-- **Form Handling**: React Hook Form
-- **Data Visualization**: Recharts
+### 🔒 Compliance & Security
+- ✅ Indian NGO compliance (80G, 12A, FCRA)
+- 🛡️ JWT authentication & authorization
+- � Rate limiting & security headers
+- 📝 Comprehensive audit logging
+- 🌐 CORS & CSRF protection
 
-### Backend
-- **Runtime**: Node.js 25
-- **Framework**: Express.js
-- **Language**: TypeScript
-- **ORM**: Prisma
-- **Database**: PostgreSQL (production), SQLite (development)
-- **Authentication**: JWT + bcrypt
-- **Validation**: Zod
-- **Email**: Nodemailer
-- **Security**: Helmet, CSRF, Rate Limiting
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 20+ and npm
+- PostgreSQL 16
+- Git
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/SameerAliKhan-git/mahima-ministries-platform.git
+   cd mahima-ministries-platform
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Setup PostgreSQL database**
+   ```sql
+   CREATE DATABASE nonprofit_db;
+   ```
+
+4. **Configure environment variables**
+   ```bash
+   # Copy and update backend/.env with your credentials
+   cp backend/.env.example backend/.env
+   ```
+
+5. **Run database migrations**
+   ```bash
+   cd backend
+   npx prisma migrate dev
+   npx prisma generate
+   ```
+
+6. **Start the application**
+   ```bash
+   # From root directory
+   npm run dev
+   
+   # Or use the quick start script (Windows)
+   # Double-click: START-ALL.bat
+   ```
+
+7. **Access the application**
+   - 🌐 Frontend: http://localhost:5173
+   - 🔌 Backend API: http://localhost:3000
+   - ❤️ Health Check: http://localhost:3000/health
+
+📖 **Detailed Setup Guide**: See [QUICK-START-GUIDE.md](./QUICK-START-GUIDE.md)
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| **Frontend** | React 18, TypeScript, Vite, Tailwind CSS |
+| **UI Components** | Custom components, Lucide React icons, react-country-flag |
+| **Backend** | Node.js 20, Express.js, TypeScript |
+| **Database** | PostgreSQL 16, Prisma ORM |
+| **Authentication** | JWT, bcrypt |
+| **Email** | Nodemailer (Gmail SMTP) |
+| **Validation** | Zod |
+| **Logging** | Winston |
+| **Security** | Helmet, CORS, Rate Limiting |
+| **Payments** | DANAMOJO (Indian NGO payment gateway) |
 
 ## 📋 Prerequisites
 
@@ -163,135 +216,163 @@ The application will be available at:
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:3000
 
-## 📁 Project Structure
+## � Project Structure
 
 ```
-nonprofit-donation-platform/
-├── frontend/               # React frontend application
+mahima-ministries-platform/
+├── frontend/                   # React 18 + TypeScript + Vite
 │   ├── src/
-│   │   ├── components/    # React components
-│   │   ├── pages/         # Page components
-│   │   ├── hooks/         # Custom hooks
-│   │   ├── services/      # API services
-│   │   ├── store/         # State management
-│   │   ├── types/         # TypeScript types
-│   │   └── utils/         # Utility functions
+│   │   ├── components/
+│   │   │   ├── common/        # PhoneInput (201 countries), XLogo
+│   │   │   ├── layout/        # Header, Footer, Navbar
+│   │   │   └── ...
+│   │   ├── pages/
+│   │   │   ├── public/        # 31+ pages (all Indian-localized)
+│   │   │   │   ├── ContactPage.tsx
+│   │   │   │   ├── PartnershipPage.tsx
+│   │   │   │   ├── SponsorshipPage.tsx
+│   │   │   │   └── ...
+│   │   │   └── admin/         # Admin dashboard
+│   │   ├── services/          # API client (axios)
+│   │   └── types/             # TypeScript interfaces
 │   └── package.json
 │
-├── backend/               # Express.js backend application
+├── backend/                    # Express + TypeScript + Prisma
+│   ├── prisma/
+│   │   ├── schema.prisma      # PostgreSQL schema (INR default)
+│   │   └── migrations/        # Database migrations
 │   ├── src/
-│   │   ├── config/       # Configuration files
-│   │   ├── middleware/   # Express middleware
-│   │   ├── routes/       # API routes
-│   │   ├── controllers/  # Route controllers
-│   │   ├── services/     # Business logic
-│   │   ├── validators/   # Input validation
-│   │   └── utils/        # Utility functions
-│   ├── prisma/           # Database schema
+│   │   ├── controllers/
+│   │   │   ├── contact.controller.ts
+│   │   │   ├── partnership.controller.ts
+│   │   │   └── ...
+│   │   ├── services/
+│   │   │   └── notification.service.ts  # Email + WhatsApp
+│   │   ├── routes/
+│   │   │   ├── contact.routes.ts
+│   │   │   └── partnership.routes.ts
+│   │   └── config/
+│   │       └── env.ts
+│   ├── .env                   # PostgreSQL credentials
 │   └── package.json
 │
-├── docs/                 # Documentation
-├── scripts/              # Utility scripts
-└── package.json          # Root package.json
+├── START-ALL.bat              # Windows: Start frontend + backend
+├── QUICK-START-GUIDE.md
+├── EMAIL-SETUP-GUIDE.md
+└── README.md
 ```
 
-## 🧪 Testing
+## 🔌 API Endpoints
 
-```bash
-# Run all tests
-npm test
+### Contact Form
+```http
+POST /api/contact
+Content-Type: application/json
 
-# Run backend tests
-npm run test:backend
-
-# Run frontend tests
-npm run test:frontend
-
-# Run E2E tests
-npm run test:e2e
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phone": "+919876543210",
+  "subject": "Donation inquiry",
+  "message": "I would like to know more about your programs..."
+}
 ```
 
-## 🔒 Security Features
+### Partnership Application
+```http
+POST /api/partnerships/apply
+Content-Type: application/json
 
-- JWT-based authentication with refresh tokens
-- bcrypt password hashing (12 rounds)
-- CSRF protection for state-changing operations
-- Rate limiting on all endpoints
-- Helmet security headers
-- Input validation and sanitization
-- SQL injection prevention (Prisma ORM)
-- XSS protection
+{
+  "organizationName": "ABC Corporation",
+  "contactName": "Jane Smith",
+  "contactEmail": "jane@abc.com",
+  "contactPhone": "+919123456789",
+  "partnershipType": "CORPORATE",
+  "proposalDetails": "We would like to sponsor education programs..."
+}
+```
 
-## 📊 Admin Credentials (Development)
+### Admin Endpoints (Authentication Required)
+- `GET /api/contact/inquiries` - View all contact inquiries
+- `PATCH /api/contact/inquiries/:id` - Update inquiry status
+- `GET /api/partnerships/applications` - View all partnership applications
+- `PATCH /api/partnerships/applications/:id` - Update application status
 
-After seeding the database:
-- Email: admin@nonprofit.org
-- Password: Admin123!
+## 🔒 Security
 
-## 🚢 Deployment
+- **Authentication**: JWT tokens with bcrypt password hashing
+- **Validation**: Zod schemas for all inputs
+- **Rate Limiting**: Protection against brute-force attacks
+- **Security Headers**: Helmet.js for HTTP headers
+- **CORS**: Configured for frontend-backend communication
+- **SQL Injection**: Prisma ORM parameterized queries
+- **Sensitive Data**: .env files excluded from Git
+
+## � Deployment
 
 ### Production Build
 
 ```bash
+# Build frontend
+cd frontend
+npm run build
+
+# Build backend
+cd backend
 npm run build
 ```
 
-### Docker Deployment
+### Environment Variables (Production)
 
-```bash
-# Build and start containers
-docker-compose up -d
+Update `backend/.env` with production values:
+- `DATABASE_URL`: Production PostgreSQL connection string
+- `SMTP_PASSWORD`: Gmail App Password (see EMAIL-SETUP-GUIDE.md)
+- `NODE_ENV`: Set to `production`
+- `FRONTEND_URL`: Your production domain
 
-# Stop containers
-docker-compose down
-```
+## � Documentation
 
-### Environment Variables for Production
+- **[Quick Start Guide](QUICK-START-GUIDE.md)** - Detailed installation instructions
+- **[Email Setup Guide](EMAIL-SETUP-GUIDE.md)** - Gmail SMTP configuration
+- **[GitHub Push Guide](GITHUB-PUSH-GUIDE.md)** - Repository management
 
-Ensure all environment variables are set in your production environment:
-- Update `DATABASE_URL` to production PostgreSQL
-- Use production Stripe keys
-- Configure production email service (SendGrid, Mailgun)
-- Set up AWS S3 for file storage
-- Configure Redis for sessions
+## 📧 Contact
 
-## 📖 Documentation
-
-- [API Documentation](./docs/api/openapi.yaml)
-- [System Design](./docs/system_design/system_design.md)
-- [Deployment Guide](./docs/deployment/)
-- [User Guides](./docs/user-guides/)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-For support, email support@nonprofit.org or open an issue in the repository.
+**Mahima Ministries**
+- 📧 Email: mahimaministriesindia@gmail.com, rdmaharaju@gmail.com
+- 📞 Phone: 040-23032675, +91 9246272675, +91 9246332264
+- 💬 WhatsApp: [+91 9246272675](https://wa.me/919246272675)
+- 📍 Address: 2-38/8/2/9/4/1, NTR Nagar Colony, Chandanagar, Ameenpur, Sangareddy, Telangana - 502032
+- 🔗 GitHub: [SameerAliKhan-git](https://github.com/SameerAliKhan-git)
 
 ## 🗺️ Roadmap
 
-- [ ] Phase 1: Foundation (Weeks 1-4)
-- [ ] Phase 2: Core Features (Weeks 5-8)
-- [ ] Phase 3: Enhancement (Weeks 9-10)
-- [ ] Phase 4: Testing & Launch (Weeks 11-12)
+**Completed:**
+- ✅ Indian localization (31+ pages)
+- ✅ Contact & Partnership forms with email notifications
+- ✅ PhoneInput component (201 countries with flags)
+- ✅ PostgreSQL database integration
+- ✅ Backend API with validation
+- ✅ Unified startup script
 
-### Future Enhancements
+**In Progress:**
+- 🔄 Email SMTP configuration (needs Gmail App Password)
+- 🔄 Admin dashboard UI
 
-- Mobile app (React Native)
-- Multi-language support
-- Peer-to-peer fundraising
-- Event management
-- Volunteer management
+**Planned:**
+- ⏳ DANAMOJO payment gateway integration
+- ⏳ WhatsApp API (Twilio)
+- ⏳ More form integrations (Sponsorship, etc.)
+- ⏳ Mobile app (React Native)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Made with ❤️ for Mahima Ministries - Supporting underprivileged communities in India**
 - Integration with accounting software
 
 ## 👥 Team
@@ -312,5 +393,6 @@ For support, email support@nonprofit.org or open an issue in the repository.
 ---
 
 Built with ❤️ for non-profit organizations making a difference in the world.
-#   m a h i m a - m i n i s t r i e s - p l a t f o r m  
+#   m a h i m a - m i n i s t r i e s - p l a t f o r m 
+ 
  
