@@ -1,0 +1,225 @@
+// This is your Prisma schema file
+// Learn more: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  DONOR
+  ADMIN
+  PARTNER
+}
+
+enum DonationStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+  CANCELLED
+}
+
+enum RecurringInterval {
+  MONTHLY
+  QUARTERLY
+  ANNUALLY
+}
+
+enum PartnershipType {
+  CORPORATE
+  INSTITUTIONAL
+  INDIVIDUAL
+  FOUNDATION
+}
+
+enum ApplicationStatus {
+  PENDING
+  UNDER_REVIEW
+  APPROVED
+  REJECTED
+}
+
+enum InquiryStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+model User {
+  id                String    @id @default(cuid())
+  email             String    @unique
+  password          String
+  firstName         String
+  lastName          String
+  phone             String?
+  role              Role      @default(DONOR)
+  emailVerified     Boolean   @default(false)
+  isEmailVerified   Boolean   @default(false)
+  verificationToken String?
+  resetToken        String?
+  resetTokenExpiry  DateTime?
+  twoFactorEnabled  Boolean   @default(false)
+  twoFactorSecret   String?
+  lastLoginAt       DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  // Relations
+  donations         Donation[]
+  profile           Profile?
+  sessions          Session[]
+  partnershipApplications PartnershipApplication[]
+
+  @@index([email])
+  @@index([role])
+  @@index([createdAt])
+}
+
+model Profile {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  firstName   String
+  lastName    String
+  address     String?
+  city        String?
+  state       String?
+  zipCode     String?
+  country     String?
+  taxId       String?
+  preferences Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Donation {
+  id                String          @id @default(cuid())
+  userId            String?
+  amount            Decimal         @db.Decimal(10, 2)
+  currency          String          @default("INR")
+  status            DonationStatus  @default(PENDING)
+  paymentMethod     String          @default("stripe")
+  paymentIntentId   String?         @unique
+  transactionId     String?
+  isRecurring       Boolean         @default(false)
+  recurringInterval RecurringInterval?
+  isAnonymous       Boolean         @default(false)
+  campaignId        String?
+  tributeType       String?
+  tributeName       String?
+  dedicatedTo       String?
+  message           String?
+  receiptSent       Boolean         @default(false)
+  receiptUrl        String?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  // Relations
+  user              User?           @relation(fields: [userId], references: [id], onDelete: SetNull)
+  campaign          Campaign?       @relation(fields: [campaignId], references: [id])
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+  @@index([campaignId])
+}
+
+model Campaign {
+  id          String    @id @default(cuid())
+  name        String
+  description String
+  goal        Decimal   @db.Decimal(10, 2)
+  raised      Decimal   @default(0) @db.Decimal(10, 2)
+  startDate   DateTime
+  endDate     DateTime?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // Relations
+  donations   Donation[]
+
+  @@index([isActive])
+  @@index([startDate])
+}
+
+model PartnershipApplication {
+  id                String              @id @default(cuid())
+  userId            String?
+  organizationName  String
+  contactName       String
+  contactEmail      String
+  contactPhone      String
+  partnershipType   PartnershipType
+  proposalDetails   String
+  documentsUrl      String?
+  status            ApplicationStatus   @default(PENDING)
+  reviewedBy        String?
+  reviewedAt        DateTime?
+  reviewNotes       String?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+
+  // Relations
+  user              User?               @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  userId       String
+  token        String   @unique
+  refreshToken String?  @unique
+  expiresAt    DateTime
+  isRevoked    Boolean  @default(false)
+  ipAddress    String?
+  userAgent    String?
+  createdAt    DateTime @default(now())
+
+  // Relations
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@index([isRevoked])
+}
+
+model ContactInquiry {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    InquiryStatus @default(NEW)
+  respondedAt DateTime?
+  createdAt DateTime      @default(now())
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  resource  String
+  details   Json?
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
+  @@index([action])
+}

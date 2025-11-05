@@ -1,0 +1,35 @@
+{
+  "name": "nonprofit-donation-platform",
+  "version": "1.0.0",
+  "description": "Comprehensive full-stack donation platform for non-profit organizations",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspaces",
+    "build:backend": "npm run build --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "setup": "npm install && npm run setup --workspaces"
+  },
+  "keywords": [
+    "non-profit",
+    "donation",
+    "platform",
+    "fundraising",
+    "charity"
+  ],
+  "author": "Non-Profit Organization",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.1.1"
+  }
+}

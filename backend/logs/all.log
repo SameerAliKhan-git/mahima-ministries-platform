@@ -1,0 +1,77 @@
+2025-11-05 15:07:40:740 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-05 15:07:40:740 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-05 15:07:40:740 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-05 16:10:13:1013 [33mwarn[39m: [33mGET / 404 - 56ms[39m
+2025-11-05 16:10:13:1013 [33mwarn[39m: [33mGET /favicon.ico 404 - 4ms[39m
+2025-11-05 20:23:02:232 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-05 20:23:02:232 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-05 20:23:02:232 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-05 23:30:35:3035 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-05 23:30:35:3035 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-05 23:30:35:3035 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-05 23:36:07:367 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-05 23:36:07:367 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-05 23:36:07:367 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-06 00:05:55:555 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 00:05:55:555 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 00:05:55:555 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-06 00:43:44:4344 [35mhttp[39m: [35mGET /health 200 - 60ms[39m
+2025-11-06 00:44:11:4411 [33mwarn[39m: [33mPOST / 400 - 35ms[39m
+2025-11-06 00:44:28:4428 [31merror[39m: [31mError submitting contact form: [39m
+[31mInvalid `prisma.contactInquiry.create()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\contact.controller.ts:28:49[39m
+
+[31m  25 const validatedData = contactInquirySchema.parse(req.body);[39m
+[31m  26 [39m
+[31m  27 // Save to database[39m
+[31m→ 28 const inquiry = await prisma.contactInquiry.create([39m
+[31mCan't reach database server at `localhost:5432`[39m
+
+[31mPlease make sure your database server is running at `localhost:5432`.[39m
+2025-11-06 00:44:28:4428 [31merror[39m: [31mPOST / 500 - 4281ms[39m
+2025-11-06 01:21:32:2132 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:21:32:2132 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:21:32:2132 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-06 01:21:44:2144 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:21:44:2144 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:21:44:2144 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-06 01:22:34:2234 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:22:34:2234 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:22:34:2234 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-06 01:22:56:2256 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-06 01:23:19:2319 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:23:19:2319 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:23:19:2319 [32minfo[39m: [32m🔐 Database: SQLite[39m
+2025-11-06 01:24:51:2451 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:24:51:2451 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:24:51:2451 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 01:28:29:2829 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:28:29:2829 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:28:29:2829 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 01:29:07:297 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:29:07:297 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:29:07:297 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 01:29:30:2930 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-06 01:30:10:3010 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:30:10:3010 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:30:10:3010 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 01:30:15:3015 [35mhttp[39m: [35mGET /health 200 - 16ms[39m
+2025-11-06 01:30:28:3028 [33mwarn[39m: [33mPOST / 400 - 4ms[39m
+2025-11-06 01:33:06:336 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:33:06:336 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:33:06:336 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 01:35:05:355 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:35:05:355 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:35:05:355 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 01:35:24:3524 [35mhttp[39m: [35mGET /health 200 - 19ms[39m
+2025-11-06 01:36:34:3634 [33mwarn[39m: [33mPOST / 400 - 16ms[39m
+2025-11-06 01:37:26:3726 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
+2025-11-06 01:37:26:3726 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
+2025-11-06 01:37:26:3726 [35mhttp[39m: [35mPOST / 201 - 21764ms[39m
+2025-11-06 01:38:05:385 [33mwarn[39m: [33mPOST / 400 - 7ms[39m
+2025-11-06 01:40:14:4014 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
+2025-11-06 01:40:14:4014 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
+2025-11-06 01:40:14:4014 [35mhttp[39m: [35mPOST / 201 - 21052ms[39m
+2025-11-06 01:44:45:4445 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 01:44:45:4445 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 01:44:45:4445 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m

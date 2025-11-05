@@ -1,0 +1,16 @@
+2025-11-06 00:44:28:4428 [31merror[39m: [31mError submitting contact form: [39m
+[31mInvalid `prisma.contactInquiry.create()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\contact.controller.ts:28:49[39m
+
+[31m  25 const validatedData = contactInquirySchema.parse(req.body);[39m
+[31m  26 [39m
+[31m  27 // Save to database[39m
+[31m→ 28 const inquiry = await prisma.contactInquiry.create([39m
+[31mCan't reach database server at `localhost:5432`[39m
+
+[31mPlease make sure your database server is running at `localhost:5432`.[39m
+2025-11-06 00:44:28:4428 [31merror[39m: [31mPOST / 500 - 4281ms[39m
+2025-11-06 01:37:26:3726 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
+2025-11-06 01:37:26:3726 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
+2025-11-06 01:40:14:4014 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
+2025-11-06 01:40:14:4014 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
