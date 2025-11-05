@@ -312,3 +312,5 @@ For support, email support@nonprofit.org or open an issue in the repository.
 ---
 
 Built with ❤️ for non-profit organizations making a difference in the world.
+#   m a h i m a - m i n i s t r i e s - p l a t f o r m  
+ 
