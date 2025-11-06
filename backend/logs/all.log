@@ -75,3 +75,31 @@
 2025-11-06 01:44:45:4445 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
 2025-11-06 01:44:45:4445 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
 2025-11-06 01:44:45:4445 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 13:43:42:4342 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 13:43:42:4342 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 13:43:42:4342 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 13:56:18:5618 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.68.108:587[39m
+2025-11-06 13:56:18:5618 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.68.108:587[39m
+2025-11-06 13:56:18:5618 [35mhttp[39m: [35mPOST / 201 - 22224ms[39m
+2025-11-06 15:52:26:5226 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 15:52:26:5226 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-06 15:52:26:5226 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 16:10:21:1021 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 16:10:22:1022 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-06 16:10:22:1022 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 16:10:35:1035 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-06 16:11:07:117 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 16:11:07:117 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-06 16:11:07:117 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 16:13:04:134 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 16:13:04:134 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-06 16:13:04:134 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 16:16:30:1630 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 16:16:30:1630 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-06 16:16:30:1630 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 16:18:53:1853 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 16:18:53:1853 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-06 16:18:53:1853 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-06 16:19:52:1952 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-06 16:19:52:1952 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-06 16:19:52:1952 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
