@@ -1,7 +1,15 @@
+version: 2
+authtoken: # Your authtoken will be added after you run 'ngrok config add-authtoken'
+update_channel: stable
+web_addr: localhost:4040
+log_level: info
+
 tunnels:
   frontend:
     addr: 5173
     proto: http
+    inspect: true
   backend:
     addr: 3000
     proto: http
+    inspect: true

@@ -23,12 +23,13 @@ A comprehensive full-stack donation and community management platform built for 
 ## ✨ Key Features
 
 ### 💳 For Donors
-- ✅ Secure donation system with Stripe integration
+- ✅ Secure donation system with DANAMOJO integration (Indian payment gateway)
 - ✅ Recurring donations (monthly/quarterly/annually)
 - ✅ Anonymous donation option
 - ✅ Dedication messages for donations
 - ✅ Personal donor dashboard with statistics
 - ✅ Complete donation history with pagination
+- ✅ Automated 80G tax receipt generation
 - ✅ Email confirmations and receipts
 - ✅ Impact score tracking
 - 📱 Fully mobile-responsive design
@@ -176,7 +177,7 @@ http://localhost:4040
 | **Nodemailer** | Latest | Email service |
 | **Winston** | Latest | Logging |
 | **Helmet** | Latest | Security headers |
-| **Stripe** | Latest | Payment processing |
+| **DANAMOJO** | Latest | Indian payment gateway |
 
 ### DevOps & Tools
 | Technology | Purpose |
@@ -289,8 +290,9 @@ POST /api/auth/logout           # Logout user
 POST /api/donations             # Create donation
 GET /api/donations              # Get user's donations (auth required)
 GET /api/donations/:id          # Get specific donation
-POST /api/donations/create-payment-intent  # Create Stripe payment intent
-POST /api/donations/webhook     # Stripe webhook handler
+POST /api/donations/create-payment  # Create DANAMOJO payment
+POST /api/donations/webhook     # DANAMOJO webhook handler
+POST /api/donations/verify      # Verify payment status
 ```
 
 ### Contact & Partnerships
@@ -310,12 +312,14 @@ Content-Type: application/json
 {
   "amount": 5000,
   "currency": "INR",
-  "paymentMethod": "STRIPE",
+  "paymentMethod": "DANAMOJO",
   "isRecurring": true,
   "frequency": "MONTHLY",
   "isAnonymous": false,
   "dedicationMessage": "In loving memory of...",
-  "campaignId": "optional-campaign-id"
+  "campaignId": "optional-campaign-id",
+  "panNumber": "ABCDE1234F",
+  "generate80G": true
 }
 ```
 
@@ -367,7 +371,8 @@ NODE_ENV=production npm start
 - [ ] Update `DATABASE_URL` with production PostgreSQL
 - [ ] Set `NODE_ENV=production`
 - [ ] Configure production `FRONTEND_URL`
-- [ ] Add real Stripe API keys
+- [ ] Add real DANAMOJO API keys (Merchant ID, API Key)
+- [ ] Configure 80G certificate details
 - [ ] Configure Gmail app password for SMTP
 - [ ] Set up SSL certificates (HTTPS)
 - [ ] Configure domain and DNS
@@ -375,6 +380,8 @@ NODE_ENV=production npm start
 - [ ] Enable error monitoring (Sentry, etc.)
 - [ ] Configure automated backups
 - [ ] Set up CI/CD pipeline
+- [ ] Test DANAMOJO webhook endpoint
+- [ ] Configure payment reconciliation
 
 ### Deployment Options
 
@@ -487,20 +494,22 @@ NODE_ENV=production npm start
 - ✅ Custom branding & logo
 
 ### 🔄 In Progress (Phase 4)
-- 🔄 Stripe API keys configuration
+- 🔄 DANAMOJO API integration
 - 🔄 Gmail SMTP setup
 - 🔄 ngrok authentication
 - 🔄 Admin dashboard UI enhancements
 
 ### ⏳ Planned (Phase 5+)
-- ⏳ Payment reconciliation reports
-- ⏳ Automated 80G receipt generation
+- ⏳ Payment reconciliation reports with DANAMOJO
+- ⏳ Complete 80G receipt automation
 - ⏳ WhatsApp API integration (Twilio)
 - ⏳ Campaign management module
 - ⏳ Mobile app (React Native)
 - ⏳ Advanced analytics dashboard
 - ⏳ Multi-language support (Hindi, Telugu)
 - ⏳ SMS notifications
+- ⏳ UPI QR code generation
+- ⏳ Offline donation tracking
 
 
 
@@ -526,7 +535,7 @@ NODE_ENV=production npm start
 - **[shadcn/ui](https://ui.shadcn.com/)** - Beautiful UI components
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS
 - **[Express.js](https://expressjs.com/)** - Web framework
-- **[Stripe](https://stripe.com/)** - Payment processing
+- **[DANAMOJO](https://danamojo.org/)** - Indian NGO payment gateway
 - **[ngrok](https://ngrok.com/)** - Secure tunneling
 
 ### Contributors
