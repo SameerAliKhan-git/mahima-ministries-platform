@@ -1,18 +1,49 @@
 import nodemailer from 'nodemailer';
+import twilio from 'twilio';
 import { logger } from '../utils/logger.util';
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'mahimaministriesindia@gmail.com';
-const ADMIN_WHATSAPP = process.env.ADMIN_WHATSAPP || '919246272675';
+const ADMIN_WHATSAPP = process.env.ADMIN_WHATSAPP || '+919246272675';
+
+// Initialize Twilio client
+const twilioClient = process.env.TWILIO_ACCOUNT_SID && process.env.TWILIO_AUTH_TOKEN
+  ? twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
+  : null;
 
 // Create email transporter
 const createTransporter = () => {
-  return nodemailer.createTransport({
+  // Check if SMTP is configured
+  const smtpPassword = process.env.SMTP_PASSWORD || process.env.SMTP_PASS;
+  
+  if (!smtpPassword || smtpPassword === 'your-gmail-app-password-here') {
+    logger.warn('SMTP not configured - emails will be logged instead of sent');
+    // Return a test transporter that just logs
+    return {
+      sendMail: async (mailOptions: any) => {
+        logger.info('📧 Email would be sent:', {
+          to: mailOptions.to,
+          subject: mailOptions.subject,
+          from: mailOptions.from,
+        });
+        console.log('\n' + '='.repeat(80));
+        console.log('📧 EMAIL NOTIFICATION');
+        console.log('='.repeat(80));
+        console.log('To:', mailOptions.to);
+        console.log('From:', mailOptions.from);
+        console.log('Subject:', mailOptions.subject);
+        console.log('='.repeat(80) + '\n');
+        return { messageId: 'test-' + Date.now() };
+      },
+    } as any;
+  }
+  
+  return nodemailer.createTransporter({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: false,
     auth: {
       user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      pass: smtpPassword,
     },
   });
 };
@@ -347,35 +378,50 @@ export const sendWhatsAppNotification = async (notification: {
         `⏰ ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST`;
     }
 
-    // Log the WhatsApp message (in production, integrate with WhatsApp API)
-    logger.info('WhatsApp notification prepared:', { message, to: ADMIN_WHATSAPP });
+    // Check if Twilio is configured
+    if (!twilioClient) {
+      logger.warn('Twilio not configured - WhatsApp message will be logged only');
+      console.log('\n' + '='.repeat(60));
+      console.log('📱 WHATSAPP NOTIFICATION TO:', ADMIN_WHATSAPP);
+      console.log('='.repeat(60));
+      console.log(message);
+      console.log('='.repeat(60) + '\n');
+      return { success: true, message: 'WhatsApp notification logged (Twilio not configured)' };
+    }
+
+    // Send WhatsApp message using Twilio
+    const twilioFrom = process.env.TWILIO_WHATSAPP_FROM || 'whatsapp:+14155238886';
+    const twilioTo = `whatsapp:${ADMIN_WHATSAPP}`;
     
-    // TODO: Integrate with WhatsApp Business API or Twilio
-    // Example using Twilio (you'll need to install and configure):
-    /*
-    const accountSid = process.env.TWILIO_ACCOUNT_SID;
-    const authToken = process.env.TWILIO_AUTH_TOKEN;
-    const client = require('twilio')(accountSid, authToken);
+    logger.info('Sending WhatsApp via Twilio:', { from: twilioFrom, to: twilioTo });
     
-    await client.messages.create({
-      from: `whatsapp:${process.env.TWILIO_WHATSAPP_NUMBER}`,
-      to: `whatsapp:${ADMIN_WHATSAPP}`,
-      body: message
+    const result = await twilioClient.messages.create({
+      from: twilioFrom,
+      to: twilioTo,
+      body: message,
     });
-    */
     
-    // For now, just log it
+    logger.info('✅ WhatsApp sent successfully:', { sid: result.sid, status: result.status });
     console.log('\n' + '='.repeat(60));
-    console.log('📱 WHATSAPP NOTIFICATION TO:', ADMIN_WHATSAPP);
-    console.log('='.repeat(60));
-    console.log(message);
+    console.log('✅ WHATSAPP SENT TO:', ADMIN_WHATSAPP);
+    console.log('Message SID:', result.sid);
+    console.log('Status:', result.status);
     console.log('='.repeat(60) + '\n');
     
-    return { success: true, message: 'WhatsApp notification logged (integration pending)' };
-  } catch (error) {
-    logger.error('Error sending WhatsApp notification:', error);
+    return { success: true, message: 'WhatsApp notification sent', sid: result.sid };
+  } catch (error: any) {
+    logger.error('❌ Error sending WhatsApp notification:', error);
+    
+    // Log the error details
+    console.log('\n' + '='.repeat(60));
+    console.log('❌ WHATSAPP SENDING FAILED');
+    console.log('Error:', error.message);
+    if (error.code) console.log('Error Code:', error.code);
+    if (error.moreInfo) console.log('More Info:', error.moreInfo);
+    console.log('='.repeat(60) + '\n');
+    
     // Don't throw error to prevent email sending failure
-    return { success: false, error };
+    return { success: false, error: error.message };
   }
 };
 
