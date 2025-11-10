@@ -59,7 +59,7 @@ export default function Header() {
               onMouseEnter={() => setOpenDropdown('whoWeAre')}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <button className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-purple-600 font-medium transition-colors rounded-lg hover:bg-purple-50">
+              <button className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors rounded-lg hover:bg-orange-50">
                 <span>Who We Are</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === 'whoWeAre' ? 'rotate-180' : ''}`} />
               </button>
@@ -70,7 +70,7 @@ export default function Header() {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="block px-4 py-2.5 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors font-medium"
+                      className="block px-4 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors font-medium"
                     >
                       {item.name}
                     </Link>
@@ -85,7 +85,7 @@ export default function Header() {
               onMouseEnter={() => setOpenDropdown('ourWork')}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <button className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-purple-600 font-medium transition-colors rounded-lg hover:bg-purple-50">
+              <button className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors rounded-lg hover:bg-orange-50">
                 <span>Our Work</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === 'ourWork' ? 'rotate-180' : ''}`} />
               </button>
@@ -96,7 +96,7 @@ export default function Header() {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="block px-4 py-2.5 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors font-medium"
+                      className="block px-4 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors font-medium"
                     >
                       {item.name}
                     </Link>
@@ -111,7 +111,7 @@ export default function Header() {
               onMouseEnter={() => setOpenDropdown('waysToGive')}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <button className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-purple-600 font-medium transition-colors rounded-lg hover:bg-purple-50">
+              <button className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors rounded-lg hover:bg-orange-50">
                 <span>Ways to Give</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === 'waysToGive' ? 'rotate-180' : ''}`} />
               </button>
@@ -122,7 +122,7 @@ export default function Header() {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="block px-4 py-2.5 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors font-medium"
+                      className="block px-4 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors font-medium"
                     >
                       {item.name}
                     </Link>
@@ -137,7 +137,7 @@ export default function Header() {
               onMouseEnter={() => setOpenDropdown('resources')}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <button className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-purple-600 font-medium transition-colors rounded-lg hover:bg-purple-50">
+              <button className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors rounded-lg hover:bg-orange-50">
                 <span>Resources</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === 'resources' ? 'rotate-180' : ''}`} />
               </button>
@@ -148,7 +148,7 @@ export default function Header() {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="block px-4 py-2.5 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors font-medium"
+                      className="block px-4 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors font-medium"
                     >
                       {item.name}
                     </Link>
@@ -160,7 +160,7 @@ export default function Header() {
             {/* Contact Link */}
             <Link 
               to="/contact" 
-              className="px-4 py-2 text-gray-700 hover:text-purple-600 font-medium transition-colors rounded-lg hover:bg-purple-50"
+              className="px-4 py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors rounded-lg hover:bg-orange-50"
             >
               Contact
             </Link>
@@ -170,7 +170,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-3">
             <Link 
               to="/login" 
-              className="text-gray-700 hover:text-purple-600 font-medium transition-colors px-4 py-2"
+              className="text-gray-700 hover:text-orange-600 font-medium transition-colors px-4 py-2"
             >
               Login
             </Link>
@@ -185,7 +185,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-purple-600 transition-colors"
+            className="lg:hidden p-2 text-gray-700 hover:text-orange-600 transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -199,7 +199,7 @@ export default function Header() {
             <div className="mb-2">
               <button
                 onClick={() => setOpenDropdown(openDropdown === 'whoWeAre' ? null : 'whoWeAre')}
-                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-purple-600 font-semibold transition-colors rounded-lg hover:bg-purple-50"
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-orange-600 font-semibold transition-colors rounded-lg hover:bg-orange-50"
               >
                 <span>Who We Are</span>
                 <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === 'whoWeAre' ? 'rotate-180' : ''}`} />
@@ -211,7 +211,7 @@ export default function Header() {
                       key={item.name}
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-4 py-2.5 text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition-colors rounded-lg"
+                      className="block px-4 py-2.5 text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors rounded-lg"
                     >
                       {item.name}
                     </Link>
@@ -224,7 +224,7 @@ export default function Header() {
             <div className="mb-2">
               <button
                 onClick={() => setOpenDropdown(openDropdown === 'ourWork' ? null : 'ourWork')}
-                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-purple-600 font-semibold transition-colors rounded-lg hover:bg-purple-50"
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-orange-600 font-semibold transition-colors rounded-lg hover:bg-orange-50"
               >
                 <span>Our Work</span>
                 <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === 'ourWork' ? 'rotate-180' : ''}`} />
@@ -236,7 +236,7 @@ export default function Header() {
                       key={item.name}
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-4 py-2.5 text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition-colors rounded-lg"
+                      className="block px-4 py-2.5 text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors rounded-lg"
                     >
                       {item.name}
                     </Link>
@@ -249,7 +249,7 @@ export default function Header() {
             <div className="mb-2">
               <button
                 onClick={() => setOpenDropdown(openDropdown === 'waysToGive' ? null : 'waysToGive')}
-                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-purple-600 font-semibold transition-colors rounded-lg hover:bg-purple-50"
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-orange-600 font-semibold transition-colors rounded-lg hover:bg-orange-50"
               >
                 <span>Ways to Give</span>
                 <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === 'waysToGive' ? 'rotate-180' : ''}`} />
@@ -261,7 +261,7 @@ export default function Header() {
                       key={item.name}
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-4 py-2.5 text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition-colors rounded-lg"
+                      className="block px-4 py-2.5 text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors rounded-lg"
                     >
                       {item.name}
                     </Link>
@@ -274,7 +274,7 @@ export default function Header() {
             <div className="mb-2">
               <button
                 onClick={() => setOpenDropdown(openDropdown === 'resources' ? null : 'resources')}
-                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-purple-600 font-semibold transition-colors rounded-lg hover:bg-purple-50"
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-orange-600 font-semibold transition-colors rounded-lg hover:bg-orange-50"
               >
                 <span>Resources</span>
                 <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === 'resources' ? 'rotate-180' : ''}`} />
@@ -286,7 +286,7 @@ export default function Header() {
                       key={item.name}
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-4 py-2.5 text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition-colors rounded-lg"
+                      className="block px-4 py-2.5 text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors rounded-lg"
                     >
                       {item.name}
                     </Link>
@@ -299,7 +299,7 @@ export default function Header() {
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-4 py-3 text-gray-700 hover:text-purple-600 font-semibold transition-colors rounded-lg hover:bg-purple-50"
+              className="block px-4 py-3 text-gray-700 hover:text-orange-600 font-semibold transition-colors rounded-lg hover:bg-orange-50"
             >
               Contact
             </Link>
@@ -309,7 +309,7 @@ export default function Header() {
               <Link
                 to="/login"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block w-full text-center py-3 px-4 border-2 border-purple-300 text-purple-600 rounded-xl hover:bg-purple-50 font-semibold transition-all"
+                className="block w-full text-center py-3 px-4 border-2 border-orange-300 text-orange-600 rounded-xl hover:bg-orange-50 font-semibold transition-all"
               >
                 Login
               </Link>

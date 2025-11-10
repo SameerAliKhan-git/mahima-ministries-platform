@@ -1,12 +1,11 @@
 import { Request, Response, NextFunction } from 'express';
 import { PrismaClient, DonationStatus, RecurringInterval } from '@prisma/client';
 import { z } from 'zod';
-import Stripe from 'stripe';
 
 const prisma = new PrismaClient();
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-11-20.acacia',
-});
+
+// DANAMOJO will be integrated later - for now, mock payment functionality
+// TODO: Implement DANAMOJO service integration
 
 // Validation schemas
 const createDonationSchema = z.object({
@@ -56,16 +55,9 @@ export const createDonation = async (
       }
     }
 
-    // Create Stripe Payment Intent
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: Math.round(validatedData.amount * 100), // Convert to cents
-      currency: validatedData.currency.toLowerCase(),
-      metadata: {
-        userId: userId || 'anonymous',
-        campaignId: validatedData.campaignId || '',
-        isRecurring: validatedData.isRecurring.toString(),
-      },
-    });
+    // TODO: Create DANAMOJO Payment Order
+    // For now, create a mock payment ID
+    const mockPaymentId = `PAY_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
     // Create donation record
     const donation = await prisma.donation.create({
@@ -74,7 +66,7 @@ export const createDonation = async (
         amount: validatedData.amount,
         currency: validatedData.currency,
         status: DonationStatus.PENDING,
-        paymentIntentId: paymentIntent.id,
+        paymentIntentId: mockPaymentId,
         campaignId: validatedData.campaignId,
         isRecurring: validatedData.isRecurring,
         recurringInterval: validatedData.recurringInterval,
@@ -97,7 +89,9 @@ export const createDonation = async (
       message: 'Donation created successfully',
       data: {
         donation,
-        clientSecret: paymentIntent.client_secret,
+        paymentId: mockPaymentId,
+        // TODO: Return DANAMOJO payment URL
+        paymentUrl: `http://localhost:3000/payment/${mockPaymentId}`,
       },
     });
   } catch (error) {
@@ -314,33 +308,20 @@ export const handleStripeWebhook = async (
   next: NextFunction
 ): Promise<void> => {
   try {
-    const sig = req.headers['stripe-signature'] as string;
-    const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+    // TODO: Implement DANAMOJO webhook verification
+    const sig = req.headers['x-danamojo-signature'] as string;
+    const webhookSecret = process.env.DANAMOJO_WEBHOOK_SECRET;
 
-    let event: Stripe.Event;
+    // For now, accept all webhooks (development only)
+    const { event, order_id, status, payment_id } = req.body;
 
-    try {
-      event = stripe.webhooks.constructEvent(
-        req.body,
-        sig,
-        webhookSecret
-      );
-    } catch (err: any) {
-      res.status(400).json({
-        success: false,
-        message: `Webhook Error: ${err.message}`,
-      });
-      return;
-    }
-
-    // Handle the event
-    switch (event.type) {
-      case 'payment_intent.succeeded':
-        const paymentIntent = event.data.object as Stripe.PaymentIntent;
-        
+    // Handle the event based on status
+    switch (status) {
+      case 'success':
+      case 'completed':
         // Update donation status
         const donation = await prisma.donation.findFirst({
-          where: { paymentIntentId: paymentIntent.id },
+          where: { paymentIntentId: order_id },
           include: { campaign: true },
         });
 
@@ -349,7 +330,7 @@ export const handleStripeWebhook = async (
             where: { id: donation.id },
             data: {
               status: DonationStatus.COMPLETED,
-              transactionId: paymentIntent.id,
+              transactionId: payment_id,
             },
           });
 
@@ -366,21 +347,20 @@ export const handleStripeWebhook = async (
           }
 
           // TODO: Send thank you email
-          // await emailService.sendDonationConfirmation(donation);
+          // TODO: Generate 80G receipt if PAN provided
         }
         break;
 
-      case 'payment_intent.payment_failed':
-        const failedPayment = event.data.object as Stripe.PaymentIntent;
-        
+      case 'failed':
+      case 'declined':
         await prisma.donation.updateMany({
-          where: { paymentIntentId: failedPayment.id },
+          where: { paymentIntentId: order_id },
           data: { status: DonationStatus.FAILED },
         });
         break;
 
       default:
-        console.log(`Unhandled event type: ${event.type}`);
+        console.log(`Unhandled payment status: ${status}`);
     }
 
     res.status(200).json({ received: true });
