@@ -75,5 +75,13 @@ backend/prisma/migrations/*_snapshot.json
 .turbo
 .vercel
 
+# Installers and large binary files
+*.exe
+*.msi
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
 # Ignore vscode AI rules (optional)
 .github/instructions/codacy.instructions.md
