@@ -1,0 +1,66 @@
+# Railway Environment Variables for Backend Deployment
+# Copy these to Railway Dashboard → Variables section
+
+# === REQUIRED: Database ===
+DATABASE_URL=postgresql://postgres:Mahima%40123%40@db.kjvkfmesztykidqxsohw.supabase.co:5432/postgres?sslmode=require
+
+# === REQUIRED: Server Configuration ===
+NODE_ENV=production
+PORT=3000
+
+# === REQUIRED: JWT Secrets ===
+JWT_SECRET=3a5b21c49c7372858fde3954a831e989253fcea7108ec7cb1d6b4714666de477
+JWT_REFRESH_SECRET=7d03a8ac09961b0f31b3784fe0d6b0ed464640e0186923fcbbda3a6d4f8fa220
+JWT_EXPIRES_IN=15m
+JWT_REFRESH_EXPIRES_IN=7d
+
+# === REQUIRED: CORS Configuration ===
+CORS_ORIGIN=https://mahimaministries.org
+ALLOWED_ORIGINS=https://mahimaministries.org,https://www.mahimaministries.org
+
+# === REQUIRED: Session ===
+SESSION_SECRET=d18494208f41c9bbed85fd1e824de2926f882b9d8d1b2f9b1106b68d0fc2d73d
+SESSION_MAX_AGE=86400000
+
+# === REQUIRED: Payment Gateway - Paytm ===
+PAYTM_MERCHANT_ID=your_paytm_merchant_id_here
+PAYTM_MERCHANT_KEY=your_paytm_merchant_key_here
+PAYTM_WEBSITE=WEBSTAGING
+PAYTM_INDUSTRY_TYPE=Retail
+PAYTM_CHANNEL_ID=WEB
+PAYTM_MODE=staging
+
+# === REQUIRED: Email Configuration ===
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=chekarsamopt@gmail.com
+SMTP_PASSWORD=ubxrvudslowomvae
+EMAIL_FROM=chekarsamopt@gmail.com
+ADMIN_EMAIL=chekarsamopt@gmail.com
+ADMIN_WHATSAPP=+917416053348
+
+# === OPTIONAL: Admin Credentials (for initial setup) ===
+ADMIN_PASSWORD=change-this-strong-password
+
+# === OPTIONAL: NGO Certificates ===
+NGO_80G_NUMBER=your_80g_certificate_number
+NGO_12A_NUMBER=your_12a_certificate_number
+NGO_FCRA_NUMBER=your_fcra_number
+NGO_PAN_NUMBER=your_ngo_pan_number
+NGO_REGISTRATION_NUMBER=your_registration_number
+
+# === OPTIONAL: reCAPTCHA ===
+RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+
+# === OPTIONAL: Rate Limiting ===
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+RATE_LIMIT_AUTH_MAX_REQUESTS=10
+
+# === OPTIONAL: Logging ===
+LOG_LEVEL=info
+
+# === NOTE: After deployment, update CORS_ORIGIN ===
+# Add your Railway backend URL to allowed origins after you get it
+# Example: ALLOWED_ORIGINS=https://mahimaministries.org,https://your-backend.up.railway.app

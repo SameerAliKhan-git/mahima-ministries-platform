@@ -1,0 +1,44 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Development files
+*.md
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Test files
+**/*.test.ts
+**/*.spec.ts
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Build artifacts (we'll build in Docker)
+dist/
+build/
+
+# Database files
+*.db
+*.db-journal
+dev.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+README.md
+DEPLOYMENT_GUIDE.md
+QUICK_DEPLOY.md
+REPORTS_MANAGEMENT_GUIDE.md
