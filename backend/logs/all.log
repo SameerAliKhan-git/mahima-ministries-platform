@@ -807,3 +807,6 @@
 2025-11-12 14:03:14:314 [33mwarn[39m: [33mGET /my-donations 401 - 1ms[39m
 2025-11-12 14:03:14:314 [33mwarn[39m: [33mGET /my-donations 401 - 3ms[39m
 2025-11-12 14:04:12:412 [35mhttp[39m: [35mPOST /register 201 - 709ms[39m
+2025-11-12 22:56:30:5630 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 22:56:30:5630 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 22:56:30:5630 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
