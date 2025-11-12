@@ -24,7 +24,7 @@ export default function PartnershipPage() {
             Partner With Us
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Corporate Partnership
+            Corporate <span className="text-amber-200">Partnership</span>
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg mb-8">
             Align your business with meaningful impact. Together, we can create lasting change while strengthening your corporate social responsibility.

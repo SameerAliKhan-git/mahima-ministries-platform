@@ -83,7 +83,7 @@ export default function OtherWaysToGivePage() {
             Multiple Payment Options
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Other Ways to Give
+            Other <span className="text-amber-200">Ways to Give</span>
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg mb-4">
             Choose from various donation methods that suit your convenience. All donations are eligible for 80G tax benefits.

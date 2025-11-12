@@ -1,10 +1,74 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, ChevronDown, Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ChevronDown, Menu, X, User, LogOut } from 'lucide-react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState('');
+  const [userRole, setUserRole] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Function to check login status
+    const checkLoginStatus = () => {
+      const token = localStorage.getItem('accessToken');
+      const userStr = localStorage.getItem('user');
+      
+      if (token && userStr) {
+        setIsLoggedIn(true);
+        try {
+          const user = JSON.parse(userStr);
+          setUserName(user.name || user.email || 'User');
+          setUserRole(user.role || 'USER');
+        } catch (error) {
+          console.error('Error parsing user data:', error);
+        }
+      } else {
+        setIsLoggedIn(false);
+        setUserName('');
+        setUserRole('');
+      }
+    };
+
+    // Check on mount
+    checkLoginStatus();
+
+    // Listen for storage changes (login/logout from other tabs)
+    window.addEventListener('storage', checkLoginStatus);
+
+    // Listen for custom login event
+    window.addEventListener('userLoggedIn', checkLoginStatus);
+
+    return () => {
+      window.removeEventListener('storage', checkLoginStatus);
+      window.removeEventListener('userLoggedIn', checkLoginStatus);
+    };
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    localStorage.removeItem('user');
+    setIsLoggedIn(false);
+    setUserName('');
+    setUserRole('');
+    navigate('/');
+  };
+
+  const getRoleDisplayName = (role: string) => {
+    switch (role.toUpperCase()) {
+      case 'ADMIN':
+        return 'Admin';
+      case 'DONOR':
+        return 'Donor';
+      case 'PARTNER':
+        return 'Partner';
+      default:
+        return 'User';
+    }
+  };
 
   const navigation = {
     whoWeAre: [
@@ -31,10 +95,11 @@ export default function Header() {
     ],
     resources: [
       { name: 'Annual Report', href: '/annual-report' },
+      { name: 'Financial Reports', href: '/reports' },
       { name: 'Blog', href: '/blog' },
       { name: 'Media', href: '/media' },
       { name: 'FAQs', href: '/faqs' },
-      { name: 'Careers', href: '/contact' },
+      { name: 'Careers', href: '/careers' },
     ],
   };
 
@@ -168,12 +233,33 @@ export default function Header() {
 
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-3">
-            <Link 
-              to="/login" 
-              className="text-gray-700 hover:text-orange-600 font-medium transition-colors px-4 py-2"
-            >
-              Login
-            </Link>
+            {isLoggedIn ? (
+              <>
+                {/* User Info */}
+                <div className="flex items-center space-x-2 px-4 py-2 bg-purple-50 rounded-lg border border-purple-200">
+                  <User className="w-5 h-5 text-purple-600" />
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold text-gray-800">{userName}</span>
+                    <span className="text-xs text-gray-600">{getRoleDisplayName(userRole)}</span>
+                  </div>
+                </div>
+                {/* Logout Button */}
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center space-x-2 text-gray-700 hover:text-red-600 font-medium transition-colors px-4 py-2 hover:bg-red-50 rounded-lg"
+                >
+                  <LogOut className="w-4 h-4" />
+                  <span>Logout</span>
+                </button>
+              </>
+            ) : (
+              <Link 
+                to="/login" 
+                className="text-gray-700 hover:text-orange-600 font-medium transition-colors px-4 py-2"
+              >
+                Login
+              </Link>
+            )}
             <Link 
               to="/donate" 
               className="gradient-sunset text-white px-6 py-2.5 rounded-xl hover-lift font-semibold shadow-lg shadow-orange-500/30"
@@ -306,13 +392,37 @@ export default function Header() {
 
             {/* Mobile Actions */}
             <div className="mt-4 px-4 space-y-3 pt-4 border-t border-purple-100">
-              <Link
-                to="/login"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block w-full text-center py-3 px-4 border-2 border-orange-300 text-orange-600 rounded-xl hover:bg-orange-50 font-semibold transition-all"
-              >
-                Login
-              </Link>
+              {isLoggedIn ? (
+                <>
+                  {/* User Info Mobile */}
+                  <div className="flex items-center space-x-3 px-4 py-3 bg-purple-50 rounded-xl border border-purple-200">
+                    <User className="w-6 h-6 text-purple-600" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold text-gray-800">{userName}</span>
+                      <span className="text-xs text-gray-600">{getRoleDisplayName(userRole)}</span>
+                    </div>
+                  </div>
+                  {/* Logout Button Mobile */}
+                  <button
+                    onClick={() => {
+                      handleLogout();
+                      setMobileMenuOpen(false);
+                    }}
+                    className="flex items-center justify-center space-x-2 w-full py-3 px-4 border-2 border-red-300 text-red-600 rounded-xl hover:bg-red-50 font-semibold transition-all"
+                  >
+                    <LogOut className="w-5 h-5" />
+                    <span>Logout</span>
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/login"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-center py-3 px-4 border-2 border-orange-300 text-orange-600 rounded-xl hover:bg-orange-50 font-semibold transition-all"
+                >
+                  Login
+                </Link>
+              )}
               <Link
                 to="/donate"
                 onClick={() => setMobileMenuOpen(false)}

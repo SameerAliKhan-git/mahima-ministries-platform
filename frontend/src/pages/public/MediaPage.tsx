@@ -23,7 +23,7 @@ export default function MediaPage() {
             Press & Media
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Media Center
+            <span className="text-amber-200">Media</span> Center
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             Press releases, media kits, and downloadable resources for journalists and partners.

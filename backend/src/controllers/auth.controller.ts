@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { PrismaClient } from '@prisma/client';
 import { z } from 'zod';
+import { verifyRecaptcha } from '../utils/recaptcha';
 
 const prisma = new PrismaClient();
 
@@ -23,6 +24,7 @@ const registerSchema = z.object({
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(1, 'Password is required'),
+  recaptchaToken: z.string().min(1, 'reCAPTCHA token is required'),
 });
 
 const env = {
@@ -82,6 +84,8 @@ export const register = async (
       data: {
         email: validatedData.email,
         password: hashedPassword,
+        firstName: validatedData.firstName,
+        lastName: validatedData.lastName,
         role: validatedData.role,
         isEmailVerified: false,
         profile: {
@@ -157,6 +161,20 @@ export const login = async (
 ): Promise<void> => {
   try {
     const validatedData = loginSchema.parse(req.body);
+
+    // Verify reCAPTCHA first for security
+    const recaptchaVerification = await verifyRecaptcha(
+      validatedData.recaptchaToken,
+      req.ip
+    );
+
+    if (!recaptchaVerification.success) {
+      res.status(400).json({
+        success: false,
+        message: recaptchaVerification.message || 'reCAPTCHA verification failed',
+      });
+      return;
+    }
 
     // Find user by email
     const user = await prisma.user.findUnique({

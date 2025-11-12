@@ -85,3 +85,7 @@ backend/prisma/migrations/*_snapshot.json
 
 # Ignore vscode AI rules (optional)
 .github/instructions/codacy.instructions.md
+
+
+.github/instructions/kluster-code-verify.instructions.md
+.kluster

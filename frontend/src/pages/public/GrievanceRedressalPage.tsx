@@ -48,7 +48,7 @@ export default function GrievanceRedressalPage() {
             We're Here to Help
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Grievance Redressal
+            <span className="text-amber-200">Grievance</span> Redressal
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             Your concerns matter to us. We are committed to resolving issues promptly and fairly.

@@ -16,3 +16,71 @@
 2025-11-06 01:40:14:4014 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.24.109:587[39m
 2025-11-06 13:56:18:5618 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.68.108:587[39m
 2025-11-06 13:56:18:5618 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 74.125.68.108:587[39m
+2025-11-10 18:39:57:3957 [31merror[39m: [31mError sending contact form emails: import_nodemailer.default.createTransporter is not a function[39m
+2025-11-10 18:48:39:4839 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.108:587[39m
+2025-11-10 18:48:39:4839 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.108:587[39m
+2025-11-10 19:02:29:229 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-10 19:02:30:230 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-10 19:18:04:184 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-10 19:18:05:185 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-10 19:47:50:4750 [31merror[39m: [31mError sending contact form emails: Connection timeout[39m
+2025-11-10 19:47:55:4755 [31merror[39m: [31mError sending contact form emails: Connection timeout[39m
+2025-11-11 00:02:34:234 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-11 00:02:36:236 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-11 01:22:54:2254 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.create()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:81:36[39m
+
+[31m  78 const hashedPassword = await bcrypt.hash(validatedData.password, 12);[39m
+[31m  79 [39m
+[31m  80 // Create user and profile in a transaction[39m
+[31m→ 81 const user = await prisma.user.create({[39m
+[31m       data: {[39m
+[31m         email: "sammysameerkhan007@gmail.com",[39m
+[31m         password: "$2b$12$IRz.Tf2q4OMEtjhPspvsiOFEju9OPCEG0JKkqWut.P7BGkBNFYxyS",[39m
+[31m         role: "DONOR",[39m
+[31m         isEmailVerified: false,[39m
+[31m         profile: {[39m
+[31m           create: {[39m
+[31m             firstName: "Sameer",[39m
+[31m             lastName: "Ali Khan"[39m
+[31m           }[39m
+[31m         },[39m
+[31m     +   firstName: String[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         profile: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `firstName` is missing.[39m
+2025-11-11 01:22:54:2254 [31merror[39m: [31mPOST /api/auth/register 500 - 505ms[39m
+2025-11-11 01:23:03:233 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.create()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:81:36[39m
+
+[31m  78 const hashedPassword = await bcrypt.hash(validatedData.password, 12);[39m
+[31m  79 [39m
+[31m  80 // Create user and profile in a transaction[39m
+[31m→ 81 const user = await prisma.user.create({[39m
+[31m       data: {[39m
+[31m         email: "sammysameerkhan007@gmail.com",[39m
+[31m         password: "$2b$12$NN.AOufyfDvDC0S5af79GuDq2LwKKnMMtemHbU03AAfyil46PsGU2",[39m
+[31m         role: "PARTNER",[39m
+[31m         isEmailVerified: false,[39m
+[31m         profile: {[39m
+[31m           create: {[39m
+[31m             firstName: "Sameer",[39m
+[31m             lastName: "Ali Khan"[39m
+[31m           }[39m
+[31m         },[39m
+[31m     +   firstName: String[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         profile: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `firstName` is missing.[39m
+2025-11-11 01:23:03:233 [31merror[39m: [31mPOST /api/auth/register 500 - 502ms[39m
+2025-11-11 17:23:30:2330 [31merror[39m: [31mError: CORS error: origin http://localhost:5174 is not allowed[39m

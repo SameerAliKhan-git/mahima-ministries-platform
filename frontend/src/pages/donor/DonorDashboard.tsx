@@ -1,321 +1,90 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import {
+  Heart, TrendingUp, Calendar, Download, Gift, User, Mail, Phone, MapPin, DollarSign, FileText
+} from 'lucide-react';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
-interface User {
-  id: string;
-  email: string;
-  role: string;
-  profile: {
-    firstName: string;
-    lastName: string;
-  };
+interface UserData {
+  id: string; email: string; firstName: string; lastName: string; role: string;
+  profile?: { phone?: string; address?: string; city?: string };
 }
 
-interface Donation {
-  id: string;
-  amount: number;
-  currency: string;
-  status: string;
-  createdAt: string;
-  campaign?: {
-    title: string;
-  };
-  isRecurring: boolean;
-  recurringInterval?: string;
+interface DonationData {
+  id: string; amount: number; currency: string; status: string; createdAt: string;
+  campaign?: { title: string }; isRecurring: boolean; recurringInterval?: string;
 }
 
 export default function DonorDashboard() {
   const navigate = useNavigate();
-  const [user, setUser] = useState<User | null>(null);
-  const [donations, setDonations] = useState<Donation[]>([]);
-  const [stats, setStats] = useState({
-    totalDonated: 0,
-    totalDonations: 0,
-  });
+  const [user, setUser] = useState<UserData | null>(null);
+  const [donations, setDonations] = useState<DonationData[]>([]);
+  const [stats, setStats] = useState({ totalDonated: 0, totalDonations: 0, recurringDonations: 0 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchUserData();
+    const userStr = localStorage.getItem('user');
+    if (!userStr) { navigate('/login'); return; }
+    const userData = JSON.parse(userStr);
+    if (userData.role === 'ADMIN') { navigate('/admin/dashboard'); return; }
+    if (userData.role === 'PARTNER') { navigate('/partner/dashboard'); return; }
+    if (userData.role !== 'DONOR') { navigate('/login'); return; }
+    setUser(userData);
     fetchDonations();
-  }, []);
-
-  const fetchUserData = async () => {
-    try {
-      const token = localStorage.getItem('accessToken');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-
-      const response = await fetch(`${API_URL}/api/auth/me`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch user data');
-      }
-
-      const data = await response.json();
-      setUser(data.data);
-    } catch (error) {
-      console.error('Error fetching user data:', error);
-      navigate('/login');
-    }
-  };
+  }, [navigate]);
 
   const fetchDonations = async () => {
     try {
       const token = localStorage.getItem('accessToken');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-
       const response = await fetch(`${API_URL}/api/donations/my-donations`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        headers: { 'Authorization': `Bearer ${token}` }
       });
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch donations');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && data.data?.donations) {
+          const donationList = data.data.donations;
+          setDonations(donationList);
+          const completed = donationList.filter((d: DonationData) => d.status === 'COMPLETED');
+          const totalAmount = completed.reduce((sum: number, d: DonationData) => sum + Number(d.amount), 0);
+          const recurring = donationList.filter((d: DonationData) => d.isRecurring).length;
+          setStats({ totalDonated: totalAmount, totalDonations: donationList.length, recurringDonations: recurring });
+        }
       }
+    } catch (error) { console.error('Error:', error); }
+    finally { setLoading(false); }
+  };
 
-      const data = await response.json();
-      setDonations(data.data.donations);
-      setStats(data.data.statistics);
-    } catch (error) {
-      console.error('Error fetching donations:', error);
-    } finally {
-      setLoading(false);
+
+  const formatDate = (dateString: string) => new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  const getStatusBadge = (status: string) => {
+    const colors: Record<string, string> = { COMPLETED: 'default', PENDING: 'secondary', FAILED: 'destructive' };
+    return <Badge variant={colors[status] as any || 'default'}>{status.toLowerCase()}</Badge>;
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
     }
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('refreshToken');
-    localStorage.removeItem('user');
-    navigate('/login');
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.4 } }
   };
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
-  };
+  if (loading) return <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-white to-emerald-50"><motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5 }} className="text-center"><motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full mx-auto mb-4" /><p className="text-gray-600 text-lg">Loading dashboard...</p></motion.div></div>;
 
-  const getStatusBadge = (status: string) => {
-    const variants: any = {
-      COMPLETED: 'default',
-      PENDING: 'secondary',
-      FAILED: 'destructive',
-      CANCELLED: 'outline',
-    };
-
-    return (
-      <Badge variant={variants[status] || 'default'}>
-        {status.toLowerCase()}
-      </Badge>
-    );
-  };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading...</p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-emerald-50">
-        {/* Header */}
-        <header className="glass sticky top-0 z-50 backdrop-blur-lg border-b border-purple-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-emerald-600 bg-clip-text text-transparent">
-                My Dashboard
-              </h1>
-              <p className="text-sm text-gray-600 font-medium mt-1">
-                Welcome back, <span className="text-purple-600 font-semibold">{user?.profile?.firstName}</span>! 👋
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <Button 
-                onClick={() => navigate('/donate')} 
-                className="gradient-sunset text-white font-semibold hover-lift shadow-lg shadow-orange-500/30"
-              >
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                </svg>
-                Make a Donation
-              </Button>
-              <Button 
-                variant="outline" 
-                onClick={handleLogout}
-                className="border-purple-300 text-purple-600 hover:bg-purple-50 font-medium"
-              >
-                Logout
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <Card className="glass border-2 border-purple-100 hover-lift gradient-border overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 gradient-purple opacity-10 rounded-full blur-2xl"></div>
-            <CardHeader className="relative">
-              <CardDescription className="text-gray-600 font-medium">Total Donated</CardDescription>
-              <CardTitle className="text-4xl gradient-purple bg-clip-text text-transparent font-extrabold">
-                ${stats.totalDonated.toFixed(2)}
-              </CardTitle>
-              <div className="mt-2 flex items-center text-sm text-emerald-600 font-semibold">
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd" />
-                </svg>
-                Making impact
-              </div>
-            </CardHeader>
-          </Card>
-
-          <Card className="glass border-2 border-emerald-100 hover-lift gradient-border overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 gradient-emerald opacity-10 rounded-full blur-2xl"></div>
-            <CardHeader className="relative">
-              <CardDescription className="text-gray-600 font-medium">Total Donations</CardDescription>
-              <CardTitle className="text-4xl gradient-emerald bg-clip-text text-transparent font-extrabold">
-                {stats.totalDonations}
-              </CardTitle>
-              <div className="mt-2 flex items-center text-sm text-purple-600 font-semibold">
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                </svg>
-                Contributions
-              </div>
-            </CardHeader>
-          </Card>
-
-          <Card className="glass border-2 border-orange-100 hover-lift gradient-border overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 gradient-sunset opacity-10 rounded-full blur-2xl"></div>
-            <CardHeader className="relative">
-              <CardDescription className="text-gray-600 font-medium">Impact Score</CardDescription>
-              <CardTitle className="text-4xl gradient-sunset bg-clip-text text-transparent font-extrabold">
-                {Math.floor(stats.totalDonated / 10)}
-              </CardTitle>
-              <div className="mt-2 flex items-center text-sm text-orange-600 font-semibold">
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                Points earned
-              </div>
-            </CardHeader>
-          </Card>
-        </div>
-
-        {/* Donation History */}
-        <Card className="glass border-2 border-purple-100">
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle className="text-2xl bg-gradient-to-r from-purple-600 to-emerald-600 bg-clip-text text-transparent">
-                  Donation History
-                </CardTitle>
-                <CardDescription className="text-gray-600 mt-1">
-                  View and manage your past contributions
-                </CardDescription>
-              </div>
-              <div className="w-12 h-12 gradient-purple rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent>
-            {donations.length === 0 ? (
-              <div className="text-center py-16">
-                <div className="w-20 h-20 gradient-sunset opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 mb-2 text-lg font-medium">No donations yet</p>
-                <p className="text-gray-500 text-sm mb-6">Start your journey of giving today</p>
-                <Button 
-                  onClick={() => navigate('/donate')}
-                  className="gradient-purple text-white font-semibold hover-lift shadow-lg shadow-purple-500/30"
-                >
-                  Make Your First Donation
-                </Button>
-              </div>
-            ) : (
-              <div className="overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow className="border-purple-100">
-                      <TableHead className="font-bold text-gray-700">Date</TableHead>
-                      <TableHead className="font-bold text-gray-700">Campaign</TableHead>
-                      <TableHead className="font-bold text-gray-700">Amount</TableHead>
-                      <TableHead className="font-bold text-gray-700">Type</TableHead>
-                      <TableHead className="font-bold text-gray-700">Status</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {donations.map((donation) => (
-                      <TableRow key={donation.id} className="border-purple-50 hover:bg-purple-50/50 transition-colors">
-                        <TableCell className="font-medium text-gray-700">
-                          {formatDate(donation.createdAt)}
-                        </TableCell>
-                        <TableCell className="text-gray-800">
-                          {donation.campaign?.title || 'General Fund'}
-                        </TableCell>
-                        <TableCell className="font-bold text-purple-600">
-                          ${donation.amount.toFixed(2)} {donation.currency}
-                        </TableCell>
-                        <TableCell>
-                          {donation.isRecurring ? (
-                            <Badge className="gradient-emerald text-white border-0">
-                              {donation.recurringInterval?.toLowerCase()}
-                            </Badge>
-                          ) : (
-                            <Badge variant="secondary" className="bg-gray-100 text-gray-700">
-                              One-time
-                            </Badge>
-                          )}
-                        </TableCell>
-                        <TableCell>{getStatusBadge(donation.status)}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      </main>
-      <Footer />
-      </div>
-    </>
-  );
+  return (<><Header /><div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-emerald-50"><motion.header initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className="glass sticky top-0 z-50 backdrop-blur-lg border-b border-purple-100"><div className="container mx-auto px-4 py-4"><div className="flex items-center justify-between"><div><h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-emerald-600 bg-clip-text text-transparent">Welcome, {user?.firstName || 'Donor'}!</h1><p className="text-gray-600 mt-1">Manage your donations</p></div><div className="flex gap-3"><motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}><Button onClick={() => navigate('/donate')} className="bg-gradient-sunset text-white"><Gift className="mr-2 h-4 w-4" />Donate</Button></motion.div></div></div></div></motion.header><div className="container mx-auto px-4 py-8"><motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><motion.div variants={itemVariants}><Card className="glass hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden relative"><div className="absolute top-0 right-0 w-32 h-32 gradient-purple opacity-10 rounded-full blur-2xl"></div><CardHeader className="relative"><div className="flex items-center justify-between"><CardTitle className="text-lg">Total Donated</CardTitle><DollarSign className="h-8 w-8 text-purple-600" /></div></CardHeader><CardContent className="relative"><motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2, type: "spring" }} className="text-3xl font-bold text-purple-600">{stats.totalDonated.toFixed(2)}</motion.div><p className="text-sm text-gray-600 mt-1">Lifetime</p></CardContent></Card></motion.div><motion.div variants={itemVariants}><Card className="glass hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden relative"><div className="absolute top-0 right-0 w-32 h-32 gradient-emerald opacity-10 rounded-full blur-2xl"></div><CardHeader className="relative"><div className="flex items-center justify-between"><CardTitle className="text-lg">Total Donations</CardTitle><Heart className="h-8 w-8 text-emerald-600" /></div></CardHeader><CardContent className="relative"><motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.3, type: "spring" }} className="text-3xl font-bold text-emerald-600">{stats.totalDonations}</motion.div><p className="text-sm text-gray-600 mt-1">Acts of kindness</p></CardContent></Card></motion.div><motion.div variants={itemVariants}><Card className="glass hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden relative"><div className="absolute top-0 right-0 w-32 h-32 gradient-blue opacity-10 rounded-full blur-2xl"></div><CardHeader className="relative"><div className="flex items-center justify-between"><CardTitle className="text-lg">Recurring</CardTitle><TrendingUp className="h-8 w-8 text-blue-600" /></div></CardHeader><CardContent className="relative"><motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.4, type: "spring" }} className="text-3xl font-bold text-blue-600">{stats.recurringDonations}</motion.div><p className="text-sm text-gray-600 mt-1">Ongoing</p></CardContent></Card></motion.div></motion.div><motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.5 }}><Tabs defaultValue="donations" className="w-full"><TabsList className="glass"><TabsTrigger value="donations">Donations</TabsTrigger><TabsTrigger value="profile">Profile</TabsTrigger><TabsTrigger value="receipts">Receipts</TabsTrigger></TabsList><TabsContent value="donations"><Card className="glass hover:shadow-xl transition-all"><CardHeader><CardTitle>Donation History</CardTitle><CardDescription>View all donations</CardDescription></CardHeader><CardContent>{donations.length === 0 ? <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.6 }} className="text-center py-16"><motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}><Gift className="h-16 w-16 text-gray-300 mx-auto mb-4" /></motion.div><h3 className="text-xl font-semibold text-gray-700 mb-2">No donations yet</h3><p className="text-gray-500 mb-6">Start giving today</p><motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}><Button onClick={() => navigate('/donate')} className="bg-gradient-sunset text-white">Make Your First Donation</Button></motion.div></motion.div> : <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}><Table><TableHeader><TableRow><TableHead>Date</TableHead><TableHead>Campaign</TableHead><TableHead>Amount</TableHead><TableHead>Type</TableHead><TableHead>Status</TableHead><TableHead>Receipt</TableHead></TableRow></TableHeader><TableBody>{donations.map((donation, index) => <motion.tr key={donation.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.7 + index * 0.05 }} className="hover:bg-purple-50/50 transition-colors"><TableCell><div className="flex items-center gap-2"><Calendar className="h-4 w-4 text-gray-400" />{formatDate(donation.createdAt)}</div></TableCell><TableCell>{donation.campaign?.title || 'General Fund'}</TableCell><TableCell className="font-semibold">{donation.currency} {donation.amount}</TableCell><TableCell>{donation.isRecurring ? <Badge variant="secondary">Recurring</Badge> : <Badge variant="outline">One-time</Badge>}</TableCell><TableCell>{getStatusBadge(donation.status)}</TableCell><TableCell>{donation.status === 'COMPLETED' && <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}><Button size="sm" variant="outline" className="text-blue-600"><Download className="h-4 w-4 mr-1" />Download</Button></motion.div>}</TableCell></motion.tr>)}</TableBody></Table></motion.div>}</CardContent></Card></TabsContent><TabsContent value="profile"><Card className="glass hover:shadow-xl transition-all"><CardHeader><CardTitle>Profile</CardTitle></CardHeader><CardContent className="space-y-4"><motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid grid-cols-1 md:grid-cols-2 gap-4"><motion.div variants={itemVariants} whileHover={{ scale: 1.02 }} className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm"><User className="h-5 w-5 text-purple-600" /><div><p className="text-sm text-gray-600">Name</p><p className="font-semibold">{user?.firstName} {user?.lastName}</p></div></motion.div><motion.div variants={itemVariants} whileHover={{ scale: 1.02 }} className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm"><Mail className="h-5 w-5 text-purple-600" /><div><p className="text-sm text-gray-600">Email</p><p className="font-semibold">{user?.email}</p></div></motion.div>{user?.profile?.phone && <motion.div variants={itemVariants} whileHover={{ scale: 1.02 }} className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm"><Phone className="h-5 w-5 text-purple-600" /><div><p className="text-sm text-gray-600">Phone</p><p className="font-semibold">{user.profile.phone}</p></div></motion.div>}{user?.profile?.address && <motion.div variants={itemVariants} whileHover={{ scale: 1.02 }} className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm"><MapPin className="h-5 w-5 text-purple-600" /><div><p className="text-sm text-gray-600">Address</p><p className="font-semibold">{user.profile.address}</p></div></motion.div>}</motion.div></CardContent></Card></TabsContent><TabsContent value="receipts"><Card className="glass hover:shadow-xl transition-all"><CardHeader><CardTitle>Receipts</CardTitle></CardHeader><CardContent>{donations.filter(d => d.status === 'COMPLETED').length === 0 ? <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center py-16"><motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}><FileText className="h-16 w-16 text-gray-300 mx-auto mb-4" /></motion.div><h3 className="text-xl font-semibold text-gray-700 mb-2">No receipts</h3></motion.div> : <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-3">{donations.filter(d => d.status === 'COMPLETED').map((donation) => <motion.div key={donation.id} variants={itemVariants} whileHover={{ scale: 1.02, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }} className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm"><div className="flex items-center gap-4"><FileText className="h-8 w-8 text-purple-600" /><div><p className="font-semibold">{donation.campaign?.title || 'General'}</p><p className="text-sm text-gray-600">{formatDate(donation.createdAt)}  {donation.currency} {donation.amount}</p></div></div><motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}><Button variant="outline"><Download className="h-4 w-4 mr-2" />PDF</Button></motion.div></motion.div>)}</motion.div>}</CardContent></Card></TabsContent></Tabs></motion.div></div></div><Footer /></>);
 }
+

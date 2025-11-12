@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reCAPTCHA Test Page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .success {
+            background: #c8e6c9;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            display: none;
+        }
+        .error {
+            background: #ffcdd2;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 reCAPTCHA Test Page</h1>
+        
+        <div class="info">
+            <strong>Testing Site Key:</strong><br>
+            <code>6LesMgksAAAAAB6BfWL2i-AAp_Du43B7HAlQleR3</code>
+        </div>
+
+        <div class="info">
+            <strong>Instructions:</strong>
+            <ol>
+                <li>If you see a reCAPTCHA checkbox below WITHOUT "Invalid site key" error, your key is working! ✅</li>
+                <li>If you see an error, there's a problem with your Google reCAPTCHA configuration ❌</li>
+            </ol>
+        </div>
+
+        <h3>reCAPTCHA Widget:</h3>
+        <div class="g-recaptcha" data-sitekey="6LesMgksAAAAAB6BfWL2i-AAp_Du43B7HAlQleR3" data-callback="onSuccess"></div>
+
+        <div id="success" class="success">
+            ✅ <strong>Success!</strong> reCAPTCHA verified successfully. Your site key is working correctly!
+        </div>
+
+        <div class="error" style="margin-top: 20px;">
+            <strong>⚠️ If you see "Invalid site key" error:</strong>
+            <ol>
+                <li>Go to: <a href="https://www.google.com/recaptcha/admin" target="_blank">Google reCAPTCHA Admin</a></li>
+                <li>Find your site with key: <code>6LesMgksAAAAAB6BfWL2i-AAp_Du43B7HAlQleR3</code></li>
+                <li>Under "Domains", ensure <code>localhost</code> is listed</li>
+                <li>Ensure the reCAPTCHA type is <strong>v2 Checkbox</strong> (not v3)</li>
+                <li>Save changes and wait 1-2 minutes</li>
+                <li>Clear browser cache and refresh this page</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function onSuccess(token) {
+            document.getElementById('success').style.display = 'block';
+            console.log('reCAPTCHA Success! Token:', token);
+        }
+
+        // Check for reCAPTCHA errors
+        window.addEventListener('error', function(e) {
+            if (e.message && e.message.includes('recaptcha')) {
+                console.error('reCAPTCHA Error:', e);
+            }
+        }, true);
+
+        console.log('=== reCAPTCHA Test Page Loaded ===');
+        console.log('Site Key: 6LesMgksAAAAAB6BfWL2i-AAp_Du43B7HAlQleR3');
+        console.log('If you see console errors about "Invalid site key", check your Google reCAPTCHA admin console.');
+    </script>
+</body>
+</html>

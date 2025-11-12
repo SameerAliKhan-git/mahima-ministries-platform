@@ -10,11 +10,23 @@ import routes from './routes';
 
 const app: Express = express();
 
+const allowedOrigins = config.frontendOrigins || [config.frontendUrl];
+
 // Security middleware
 app.use(helmet());
 app.use(
   cors({
-    origin: config.frontendUrl,
+    origin: (origin, callback) => {
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error(`CORS error: origin ${origin} is not allowed`));
+    },
     credentials: true,
   })
 );
@@ -41,8 +53,11 @@ app.use(
 // Logging middleware
 app.use(loggerMiddleware);
 
+// Serve static files (uploaded reports)
+app.use('/uploads', express.static('uploads'));
+
 // Health check endpoint
-app.get('/health', (req: Request, res: Response) => {
+app.get('/health', (_req: Request, res: Response) => {
   res.status(200).json({
     status: 'ok',
     timestamp: new Date().toISOString(),
@@ -54,7 +69,7 @@ app.get('/health', (req: Request, res: Response) => {
 app.use('/api', routes);
 
 // 404 handler
-app.use((req: Request, res: Response) => {
+app.use((_req: Request, res: Response) => {
   res.status(404).json({
     success: false,
     error: {

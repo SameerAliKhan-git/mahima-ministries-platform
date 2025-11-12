@@ -136,3 +136,674 @@
 2025-11-10 17:17:01:171 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
 2025-11-10 17:17:01:171 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
 2025-11-10 17:17:01:171 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 17:21:29:2129 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 17:21:29:2129 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 17:21:29:2129 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 17:26:03:263 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 17:26:04:264 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 17:26:04:264 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 17:26:32:2632 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 17:26:33:2633 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 17:26:33:2633 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 17:27:39:2739 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 17:27:39:2739 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 17:27:39:2739 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 17:41:14:4114 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 17:41:14:4114 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 17:41:14:4114 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 17:54:31:5431 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 17:54:31:5431 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 17:54:31:5431 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 17:55:10:5510 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 17:55:10:5510 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 17:55:10:5510 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 17:56:38:5638 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 17:56:38:5638 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 17:56:38:5638 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:06:27:627 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:06:27:627 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:06:27:627 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:10:06:106 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-10 18:10:50:1050 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:10:50:1050 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:10:50:1050 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:11:59:1159 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:11:59:1159 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:11:59:1159 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:12:37:1237 [35mhttp[39m: [35mGET /health 200 - 11ms[39m
+2025-11-10 18:14:22:1422 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:14:22:1422 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:14:22:1422 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:24:49:2449 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:24:49:2449 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:24:49:2449 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:33:50:3350 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:33:50:3350 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:33:50:3350 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:34:14:3414 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:34:14:3414 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:34:14:3414 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:34:37:3437 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:34:37:3437 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:34:37:3437 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:35:41:3541 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:35:41:3541 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:35:41:3541 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:39:57:3957 [31merror[39m: [31mError sending contact form emails: import_nodemailer.default.createTransporter is not a function[39m
+2025-11-10 18:39:57:3957 [35mhttp[39m: [35mPOST / 201 - 631ms[39m
+2025-11-10 18:42:46:4246 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:42:46:4246 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:42:46:4246 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:43:42:4342 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:43:42:4342 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:43:42:4342 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:44:43:4443 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-10 18:45:07:457 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:45:07:457 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:45:07:457 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:47:19:4719 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:47:19:4719 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:47:19:4719 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:48:39:4839 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.108:587[39m
+2025-11-10 18:48:39:4839 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.108:587[39m
+2025-11-10 18:48:39:4839 [35mhttp[39m: [35mPOST / 201 - 21946ms[39m
+2025-11-10 18:57:39:5739 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:57:39:5739 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:57:39:5739 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 18:59:06:596 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 18:59:06:596 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 18:59:06:596 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 19:00:38:038 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 19:00:38:038 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 19:00:38:038 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 19:01:14:114 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 19:01:14:114 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 19:01:14:114 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 19:02:29:229 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-10 19:02:29:229 [32minfo[39m: [32mSending WhatsApp via Twilio:[39m
+2025-11-10 19:02:30:230 [32minfo[39m: [32m✅ WhatsApp sent successfully:[39m
+2025-11-10 19:02:30:230 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-10 19:02:30:230 [35mhttp[39m: [35mPOST / 201 - 23260ms[39m
+2025-11-10 19:16:50:1650 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 19:16:50:1650 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 19:16:50:1650 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 19:18:04:184 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-10 19:18:04:184 [32minfo[39m: [32mSending WhatsApp via Twilio:[39m
+2025-11-10 19:18:05:185 [32minfo[39m: [32m✅ WhatsApp sent successfully:[39m
+2025-11-10 19:18:05:185 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-10 19:18:05:185 [35mhttp[39m: [35mPOST / 201 - 23289ms[39m
+2025-11-10 19:41:27:4127 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 19:41:27:4127 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 19:41:27:4127 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 19:46:41:4641 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 19:46:41:4641 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 19:46:41:4641 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 19:47:35:4735 [32minfo[39m: [32m🔄 Attempting Gmail SMTP on port 587...[39m
+2025-11-10 19:47:35:4735 [32minfo[39m: [32m🔄 Attempting Gmail SMTP on port 587...[39m
+2025-11-10 19:47:40:4740 [33mwarn[39m: [33m❌ Port 587 failed: Connection timeout[39m
+2025-11-10 19:47:40:4740 [32minfo[39m: [32m🔄 Attempting Gmail SMTP on port 465...[39m
+2025-11-10 19:47:40:4740 [33mwarn[39m: [33m❌ Port 587 failed: Connection timeout[39m
+2025-11-10 19:47:40:4740 [32minfo[39m: [32m🔄 Attempting Gmail SMTP on port 465...[39m
+2025-11-10 19:47:45:4745 [33mwarn[39m: [33m❌ Port 465 failed: Connection timeout[39m
+2025-11-10 19:47:45:4745 [32minfo[39m: [32m🔄 Attempting Gmail SMTP on port 25...[39m
+2025-11-10 19:47:45:4745 [33mwarn[39m: [33m❌ Port 465 failed: Connection timeout[39m
+2025-11-10 19:47:45:4745 [32minfo[39m: [32m🔄 Attempting Gmail SMTP on port 25...[39m
+2025-11-10 19:47:50:4750 [33mwarn[39m: [33m❌ Port 25 failed: Connection timeout[39m
+2025-11-10 19:47:50:4750 [31merror[39m: [31mError sending contact form emails: Connection timeout[39m
+2025-11-10 19:47:50:4750 [32minfo[39m: [32mSending WhatsApp via Twilio:[39m
+2025-11-10 19:47:51:4751 [33mwarn[39m: [33m❌ Port 25 failed: Connection timeout[39m
+2025-11-10 19:47:55:4755 [32minfo[39m: [32m✅ WhatsApp sent successfully:[39m
+2025-11-10 19:47:55:4755 [31merror[39m: [31mError sending contact form emails: Connection timeout[39m
+2025-11-10 19:47:55:4755 [35mhttp[39m: [35mPOST / 201 - 21015ms[39m
+2025-11-10 19:48:52:4852 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 19:48:52:4852 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 19:48:52:4852 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 19:59:45:5945 [32minfo[39m: [32mContact form emails sent successfully to sammysameerkhan007@gmail.com and admin[39m
+2025-11-10 19:59:45:5945 [32minfo[39m: [32mSending WhatsApp via Twilio:[39m
+2025-11-10 19:59:46:5946 [32minfo[39m: [32m✅ WhatsApp sent successfully:[39m
+2025-11-10 19:59:46:5946 [35mhttp[39m: [35mPOST / 201 - 7006ms[39m
+2025-11-10 20:03:57:357 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 20:03:57:357 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 20:03:57:357 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 20:04:47:447 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 20:04:47:447 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 20:04:47:447 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 20:05:23:523 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 20:05:23:523 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 20:05:23:523 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 20:06:18:618 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 20:06:18:618 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 20:06:18:618 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 20:07:35:735 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 20:07:35:735 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 20:07:35:735 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 20:17:19:1719 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 20:17:19:1719 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 20:17:19:1719 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-10 20:17:54:1754 [32minfo[39m: [32mContact form emails sent successfully to sammysameerkhan007@gmail.com and admin[39m
+2025-11-10 20:17:54:1754 [32minfo[39m: [32mSending WhatsApp via Twilio:[39m
+2025-11-10 20:17:59:1759 [32minfo[39m: [32m✅ WhatsApp sent successfully:[39m
+2025-11-10 20:17:59:1759 [35mhttp[39m: [35mPOST / 201 - 10424ms[39m
+2025-11-10 21:58:39:5839 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-10 21:58:39:5839 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-10 21:58:39:5839 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 00:02:34:234 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-11 00:02:34:234 [32minfo[39m: [32mSending WhatsApp via Twilio:[39m
+2025-11-11 00:02:36:236 [32minfo[39m: [32m✅ WhatsApp sent successfully:[39m
+2025-11-11 00:02:36:236 [31merror[39m: [31mError sending contact form emails: connect ETIMEDOUT 64.233.170.109:587[39m
+2025-11-11 00:02:36:236 [35mhttp[39m: [35mPOST / 201 - 24536ms[39m
+2025-11-11 00:06:14:614 [32minfo[39m: [32mContact form emails sent successfully to sammysameerkhan007@gmail.com and admin[39m
+2025-11-11 00:06:14:614 [32minfo[39m: [32mSending WhatsApp via Twilio:[39m
+2025-11-11 00:06:15:615 [32minfo[39m: [32m✅ WhatsApp sent successfully:[39m
+2025-11-11 00:06:15:615 [35mhttp[39m: [35mPOST / 201 - 6136ms[39m
+2025-11-11 00:43:31:4331 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 00:43:31:4331 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 00:43:31:4331 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 00:44:54:4454 [33mwarn[39m: [33mPOST /login 401 - 595ms[39m
+2025-11-11 00:45:30:4530 [33mwarn[39m: [33mPOST /login 401 - 10ms[39m
+2025-11-11 00:45:31:4531 [33mwarn[39m: [33mPOST /login 401 - 7ms[39m
+2025-11-11 00:48:56:4856 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-11 00:59:42:5942 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 00:59:42:5942 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 00:59:42:5942 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:06:58:658 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 01:06:58:658 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 01:06:58:658 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:10:53:1053 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 01:10:53:1053 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 01:10:53:1053 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:19:42:1942 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 01:19:42:1942 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 01:19:42:1942 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:20:51:2051 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 01:20:51:2051 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 01:20:51:2051 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:22:04:224 [35mhttp[39m: [35mPOST /login 200 - 1473ms[39m
+2025-11-11 01:22:04:224 [33mwarn[39m: [33mGET /me 401 - 3ms[39m
+2025-11-11 01:22:04:224 [33mwarn[39m: [33mGET /my-donations 401 - 1ms[39m
+2025-11-11 01:22:04:224 [33mwarn[39m: [33mGET /me 401 - 1ms[39m
+2025-11-11 01:22:04:224 [33mwarn[39m: [33mGET /my-donations 401 - 2ms[39m
+2025-11-11 01:22:54:2254 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.create()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:81:36[39m
+
+[31m  78 const hashedPassword = await bcrypt.hash(validatedData.password, 12);[39m
+[31m  79 [39m
+[31m  80 // Create user and profile in a transaction[39m
+[31m→ 81 const user = await prisma.user.create({[39m
+[31m       data: {[39m
+[31m         email: "sammysameerkhan007@gmail.com",[39m
+[31m         password: "$2b$12$IRz.Tf2q4OMEtjhPspvsiOFEju9OPCEG0JKkqWut.P7BGkBNFYxyS",[39m
+[31m         role: "DONOR",[39m
+[31m         isEmailVerified: false,[39m
+[31m         profile: {[39m
+[31m           create: {[39m
+[31m             firstName: "Sameer",[39m
+[31m             lastName: "Ali Khan"[39m
+[31m           }[39m
+[31m         },[39m
+[31m     +   firstName: String[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         profile: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `firstName` is missing.[39m
+2025-11-11 01:22:54:2254 [31merror[39m: [31mPOST /api/auth/register 500 - 505ms[39m
+2025-11-11 01:23:03:233 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.create()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:81:36[39m
+
+[31m  78 const hashedPassword = await bcrypt.hash(validatedData.password, 12);[39m
+[31m  79 [39m
+[31m  80 // Create user and profile in a transaction[39m
+[31m→ 81 const user = await prisma.user.create({[39m
+[31m       data: {[39m
+[31m         email: "sammysameerkhan007@gmail.com",[39m
+[31m         password: "$2b$12$NN.AOufyfDvDC0S5af79GuDq2LwKKnMMtemHbU03AAfyil46PsGU2",[39m
+[31m         role: "PARTNER",[39m
+[31m         isEmailVerified: false,[39m
+[31m         profile: {[39m
+[31m           create: {[39m
+[31m             firstName: "Sameer",[39m
+[31m             lastName: "Ali Khan"[39m
+[31m           }[39m
+[31m         },[39m
+[31m     +   firstName: String[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         profile: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `firstName` is missing.[39m
+2025-11-11 01:23:03:233 [31merror[39m: [31mPOST /api/auth/register 500 - 502ms[39m
+2025-11-11 01:24:46:2446 [35mhttp[39m: [35mPOST /login 200 - 565ms[39m
+2025-11-11 01:24:46:2446 [33mwarn[39m: [33mGET /me 401 - 2ms[39m
+2025-11-11 01:24:46:2446 [33mwarn[39m: [33mGET /me 401 - 2ms[39m
+2025-11-11 01:24:46:2446 [33mwarn[39m: [33mGET /api/admin/dashboard-stats 404 - 5ms[39m
+2025-11-11 01:24:46:2446 [33mwarn[39m: [33mGET /api/admin/dashboard-stats 404 - 2ms[39m
+2025-11-11 01:25:49:2549 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-11 01:26:09:269 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 01:26:09:269 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 01:26:09:269 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:27:54:2754 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 01:27:54:2754 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 01:27:54:2754 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:29:08:298 [35mhttp[39m: [35mPOST /register 201 - 1101ms[39m
+2025-11-11 01:30:47:3047 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 01:30:47:3047 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 01:30:47:3047 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:31:34:3134 [33mwarn[39m: [33mPOST /login 401 - 347ms[39m
+2025-11-11 01:32:12:3212 [35mhttp[39m: [35mPOST /register 201 - 615ms[39m
+2025-11-11 01:32:12:3212 [33mwarn[39m: [33mGET /me 401 - 7ms[39m
+2025-11-11 01:32:12:3212 [33mwarn[39m: [33mGET /me 401 - 4ms[39m
+2025-11-11 01:32:12:3212 [33mwarn[39m: [33mGET /my-donations 401 - 4ms[39m
+2025-11-11 01:32:12:3212 [33mwarn[39m: [33mGET /my-donations 401 - 3ms[39m
+2025-11-11 01:32:41:3241 [35mhttp[39m: [35mPOST /login 200 - 1065ms[39m
+2025-11-11 01:32:41:3241 [33mwarn[39m: [33mGET /me 401 - 2ms[39m
+2025-11-11 01:32:41:3241 [33mwarn[39m: [33mGET /my-donations 401 - 2ms[39m
+2025-11-11 01:32:41:3241 [33mwarn[39m: [33mGET /me 401 - 3ms[39m
+2025-11-11 01:32:41:3241 [33mwarn[39m: [33mGET /my-donations 401 - 4ms[39m
+2025-11-11 01:34:39:3439 [35mhttp[39m: [35mPOST /login 200 - 764ms[39m
+2025-11-11 01:34:39:3439 [33mwarn[39m: [33mGET /me 401 - 2ms[39m
+2025-11-11 01:34:39:3439 [33mwarn[39m: [33mGET /my-donations 401 - 3ms[39m
+2025-11-11 01:34:39:3439 [33mwarn[39m: [33mGET /me 401 - 5ms[39m
+2025-11-11 01:34:39:3439 [33mwarn[39m: [33mGET /my-donations 401 - 1ms[39m
+2025-11-11 01:51:08:518 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 01:51:08:518 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 01:51:08:518 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 01:55:30:5530 [35mhttp[39m: [35mPOST /login 200 - 1582ms[39m
+2025-11-11 01:55:32:5532 [33mwarn[39m: [33mGET /me 401 - 13ms[39m
+2025-11-11 01:55:32:5532 [33mwarn[39m: [33mGET /me 401 - 9ms[39m
+2025-11-11 01:55:32:5532 [33mwarn[39m: [33mGET /my-donations 401 - 6ms[39m
+2025-11-11 01:55:32:5532 [33mwarn[39m: [33mGET /my-donations 401 - 2ms[39m
+2025-11-11 01:56:29:5629 [35mhttp[39m: [35mPOST /register 201 - 520ms[39m
+2025-11-11 01:57:47:5747 [35mhttp[39m: [35mPOST /login 200 - 535ms[39m
+2025-11-11 01:57:49:5749 [33mwarn[39m: [33mGET /me 401 - 5ms[39m
+2025-11-11 01:57:49:5749 [33mwarn[39m: [33mGET /me 401 - 4ms[39m
+2025-11-11 01:57:49:5749 [33mwarn[39m: [33mGET /api/admin/dashboard-stats 404 - 8ms[39m
+2025-11-11 01:57:49:5749 [33mwarn[39m: [33mGET /api/admin/dashboard-stats 404 - 7ms[39m
+2025-11-11 02:07:43:743 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 02:07:43:743 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 02:07:43:743 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 02:42:37:4237 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 02:42:38:4238 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 02:42:38:4238 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 02:47:24:4724 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 02:47:24:4724 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 02:47:24:4724 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 02:50:14:5014 [35mhttp[39m: [35mPOST /login 200 - 2442ms[39m
+2025-11-11 02:50:16:5016 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 02:50:16:5016 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-11 02:50:16:5016 [33mwarn[39m: [33mGET /api/admin/donations 404 - 4ms[39m
+2025-11-11 02:50:16:5016 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-11 02:50:40:5040 [33mwarn[39m: [33mGET /api/admin/donations 404 - 3ms[39m
+2025-11-11 02:50:40:5040 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-11 02:51:02:512 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 02:51:02:512 [33mwarn[39m: [33mGET /api/admin/users 404 - 4ms[39m
+2025-11-11 02:51:02:512 [33mwarn[39m: [33mGET /api/admin/donations 404 - 4ms[39m
+2025-11-11 02:51:02:512 [33mwarn[39m: [33mGET /api/admin/donations 404 - 4ms[39m
+2025-11-11 02:51:25:5125 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-11 02:51:25:5125 [33mwarn[39m: [33mGET /api/admin/donations 404 - 3ms[39m
+2025-11-11 02:52:31:5231 [33mwarn[39m: [33mPOST /login 401 - 545ms[39m
+2025-11-11 02:52:39:5239 [35mhttp[39m: [35mPOST /login 200 - 475ms[39m
+2025-11-11 02:52:41:5241 [33mwarn[39m: [33mGET /my-donations 401 - 13ms[39m
+2025-11-11 02:52:41:5241 [33mwarn[39m: [33mGET /my-donations 401 - 1ms[39m
+2025-11-11 12:26:09:269 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 12:26:09:269 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 12:26:09:269 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 13:08:52:852 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 13:08:52:852 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 13:08:52:852 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 13:09:26:926 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 13:09:26:926 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 13:09:26:926 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 13:14:13:1413 [35mhttp[39m: [35mPOST /login 200 - 3592ms[39m
+2025-11-11 13:14:14:1414 [33mwarn[39m: [33mGET /my-donations 401 - 11ms[39m
+2025-11-11 13:14:14:1414 [33mwarn[39m: [33mGET /my-donations 401 - 3ms[39m
+2025-11-11 13:14:53:1453 [35mhttp[39m: [35mPOST /login 200 - 714ms[39m
+2025-11-11 13:14:55:1455 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 13:14:55:1455 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-11 13:14:55:1455 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-11 13:14:55:1455 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-11 13:33:14:3314 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 13:33:14:3314 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 13:33:14:3314 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 13:33:21:3321 [33mwarn[39m: [33mGET /api/admin/users 404 - 8ms[39m
+2025-11-11 13:33:21:3321 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 13:33:21:3321 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-11 13:33:21:3321 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-11 13:37:10:3710 [33mwarn[39m: [33mGET /api/health 404 - 6ms[39m
+2025-11-11 13:45:23:4523 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 13:45:23:4523 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 13:45:23:4523 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 13:45:56:4556 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-11 13:50:53:5053 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 13:50:53:5053 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 13:50:53:5053 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 16:40:38:4038 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 16:40:38:4038 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 16:40:38:4038 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 16:47:23:4723 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 16:47:23:4723 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 16:47:23:4723 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 16:53:49:5349 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 16:53:49:5349 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 16:53:49:5349 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 16:57:32:5732 [35mhttp[39m: [35mPOST /login 200 - 1968ms[39m
+2025-11-11 16:57:34:5734 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 16:57:34:5734 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 16:57:34:5734 [33mwarn[39m: [33mGET /api/admin/donations 404 - 0ms[39m
+2025-11-11 16:57:34:5734 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-11 17:03:36:336 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 17:03:36:336 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 17:03:36:336 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 17:06:07:67 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-11 17:07:31:731 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 17:07:31:731 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 17:07:31:731 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 17:14:06:146 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 17:14:06:146 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 17:14:06:146 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 17:20:18:2018 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 17:20:18:2018 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 17:20:18:2018 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 17:23:30:2330 [31merror[39m: [31mError: CORS error: origin http://localhost:5174 is not allowed[39m
+2025-11-11 17:31:22:3122 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 17:31:22:3122 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 17:31:22:3122 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 17:33:40:3340 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 17:33:40:3340 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 17:33:40:3340 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 17:37:27:3727 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 17:37:27:3727 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 17:37:27:3727 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 17:44:46:4446 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 17:44:46:4446 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 17:44:46:4446 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 18:05:27:527 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 18:05:27:527 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 18:05:27:527 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 18:16:19:1619 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 18:16:19:1619 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 18:16:19:1619 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 18:22:11:2211 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 18:22:11:2211 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 18:22:11:2211 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 18:28:47:2847 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 18:28:47:2847 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 18:28:47:2847 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 18:33:37:3337 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 18:33:37:3337 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 18:33:37:3337 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 18:59:50:5950 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 18:59:50:5950 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 18:59:50:5950 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:00:41:041 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:00:41:041 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 19:00:41:041 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:14:57:1457 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:14:57:1457 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 19:14:57:1457 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:30:49:3049 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:30:49:3049 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 19:30:49:3049 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:34:30:3430 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:34:30:3430 [32minfo[39m: [32m📍 Frontend URL: https://overprominent-rhys-nonconstraining.ngrok-free.dev[39m
+2025-11-11 19:34:30:3430 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:36:56:3656 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:36:56:3656 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 19:36:56:3656 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:41:17:4117 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:41:17:4117 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 19:41:17:4117 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:42:43:4243 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:42:43:4243 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 19:42:43:4243 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:43:22:4322 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:43:22:4322 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 19:43:22:4322 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:43:37:4337 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:43:37:4337 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 19:43:37:4337 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:43:51:4351 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:43:51:4351 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 19:43:51:4351 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:44:23:4423 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:44:23:4423 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 19:44:23:4423 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 19:44:45:4445 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 19:44:45:4445 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 19:44:45:4445 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 20:29:45:2945 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 20:29:45:2945 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 20:29:45:2945 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 20:31:04:314 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 20:31:04:314 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 20:31:04:314 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 20:31:53:3153 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 20:31:53:3153 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 20:31:53:3153 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 20:33:26:3326 [33mwarn[39m: [33mPOST / 401 - 15ms[39m
+2025-11-11 20:34:07:347 [35mhttp[39m: [35mPOST /login 200 - 5804ms[39m
+2025-11-11 20:34:08:348 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 20:34:08:348 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-11 20:34:09:349 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-11 20:34:09:349 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-11 21:02:13:213 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 21:02:13:213 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 21:02:13:213 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 21:04:52:452 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 21:04:52:452 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 21:04:52:452 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 21:05:27:527 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 21:05:27:527 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 21:05:27:527 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 21:05:47:547 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 21:05:47:547 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 21:05:47:547 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 22:01:54:154 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 22:01:54:154 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 22:01:54:154 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 22:54:21:5421 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-11 22:54:21:5421 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-11 22:54:21:5421 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-11 23:05:12:512 [35mhttp[39m: [35mPOST /login 200 - 1652ms[39m
+2025-11-11 23:05:14:514 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 23:05:14:514 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-11 23:05:14:514 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-11 23:05:14:514 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-11 23:05:51:551 [35mhttp[39m: [35mPOST /login 200 - 793ms[39m
+2025-11-11 23:05:53:553 [33mwarn[39m: [33mGET /my-donations 401 - 6ms[39m
+2025-11-11 23:05:53:553 [33mwarn[39m: [33mGET /my-donations 401 - 2ms[39m
+2025-11-11 23:06:16:616 [33mwarn[39m: [33mGET /my-donations 401 - 5ms[39m
+2025-11-11 23:06:16:616 [33mwarn[39m: [33mGET /my-donations 401 - 9ms[39m
+2025-11-11 23:07:34:734 [33mwarn[39m: [33mPOST /register 409 - 22ms[39m
+2025-11-11 23:07:53:753 [35mhttp[39m: [35mPOST /register 201 - 740ms[39m
+2025-11-11 23:18:49:1849 [35mhttp[39m: [35mPOST /login 200 - 4524ms[39m
+2025-11-11 23:18:50:1850 [33mwarn[39m: [33mGET /api/admin/users 404 - 42ms[39m
+2025-11-11 23:18:50:1850 [33mwarn[39m: [33mGET /api/admin/users 404 - 16ms[39m
+2025-11-11 23:18:51:1851 [33mwarn[39m: [33mGET /api/admin/donations 404 - 8ms[39m
+2025-11-11 23:18:51:1851 [33mwarn[39m: [33mGET /api/admin/donations 404 - 14ms[39m
+2025-11-11 23:36:30:3630 [35mhttp[39m: [35mPOST /login 200 - 3002ms[39m
+2025-11-12 00:32:20:3220 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 00:32:20:3220 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 00:32:20:3220 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 00:34:12:3412 [33mwarn[39m: [33mPOST /login 400 - 10483ms[39m
+2025-11-12 00:34:25:3425 [35mhttp[39m: [35mPOST /login 200 - 2259ms[39m
+2025-11-12 00:34:27:3427 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-12 00:34:27:3427 [33mwarn[39m: [33mGET /api/admin/users 404 - 5ms[39m
+2025-11-12 00:34:27:3427 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-12 00:34:27:3427 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 00:34:57:3457 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-12 00:34:57:3457 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 00:35:29:3529 [33mwarn[39m: [33mGET / 401 - 10ms[39m
+2025-11-12 00:35:29:3529 [33mwarn[39m: [33mGET / 401 - 3ms[39m
+2025-11-12 00:35:51:3551 [33mwarn[39m: [33mGET / 401 - 1ms[39m
+2025-11-12 00:35:53:3553 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-12 00:35:53:3553 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-12 00:35:54:3554 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 00:35:54:3554 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 00:35:56:3556 [33mwarn[39m: [33mGET / 401 - 2ms[39m
+2025-11-12 00:35:56:3556 [33mwarn[39m: [33mGET / 401 - 2ms[39m
+2025-11-12 00:40:13:4013 [33mwarn[39m: [33mGET / 401 - 9ms[39m
+2025-11-12 00:40:44:4044 [33mwarn[39m: [33mGET / 401 - 5ms[39m
+2025-11-12 00:41:03:413 [33mwarn[39m: [33mGET / 401 - 5ms[39m
+2025-11-12 00:41:31:4131 [33mwarn[39m: [33mGET / 401 - 3ms[39m
+2025-11-12 00:45:41:4541 [33mwarn[39m: [33mGET / 401 - 73ms[39m
+2025-11-12 00:50:45:5045 [33mwarn[39m: [33mGET / 401 - 50ms[39m
+2025-11-12 00:50:51:5051 [33mwarn[39m: [33mGET /api/admin/users 404 - 56ms[39m
+2025-11-12 00:50:51:5051 [33mwarn[39m: [33mGET /api/admin/donations 404 - 4ms[39m
+2025-11-12 00:50:51:5051 [33mwarn[39m: [33mGET /api/admin/users 404 - 7ms[39m
+2025-11-12 00:50:51:5051 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-12 00:51:01:511 [33mwarn[39m: [33mGET /api/admin/donations 404 - 3ms[39m
+2025-11-12 00:51:01:511 [33mwarn[39m: [33mGET /api/admin/donations 404 - 6ms[39m
+2025-11-12 00:56:38:5638 [33mwarn[39m: [33mGET /api/admin/users 404 - 4ms[39m
+2025-11-12 00:56:38:5638 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 00:56:38:5638 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-12 00:56:38:5638 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-12 00:56:42:5642 [33mwarn[39m: [33mGET / 401 - 54ms[39m
+2025-11-12 00:56:42:5642 [33mwarn[39m: [33mGET / 401 - 4ms[39m
+2025-11-12 00:58:17:5817 [35mhttp[39m: [35mPOST /login 200 - 2565ms[39m
+2025-11-12 00:58:19:5819 [33mwarn[39m: [33mGET /my-donations 401 - 35ms[39m
+2025-11-12 00:58:19:5819 [33mwarn[39m: [33mGET /my-donations 401 - 3ms[39m
+2025-11-12 01:04:07:47 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 01:04:07:47 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 01:04:07:47 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 01:13:58:1358 [35mhttp[39m: [35mPOST /login 200 - 1748ms[39m
+2025-11-12 01:14:00:140 [33mwarn[39m: [33mGET /api/admin/users 404 - 5ms[39m
+2025-11-12 01:14:00:140 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-12 01:14:00:140 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 01:14:00:140 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-12 01:14:09:149 [33mwarn[39m: [33mGET / 401 - 9ms[39m
+2025-11-12 01:14:09:149 [33mwarn[39m: [33mGET / 401 - 2ms[39m
+2025-11-12 01:14:29:1429 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-12 01:14:29:1429 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 01:14:29:1429 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 01:14:29:1429 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 01:14:31:1431 [33mwarn[39m: [33mGET / 401 - 3ms[39m
+2025-11-12 01:14:31:1431 [33mwarn[39m: [33mGET / 401 - 2ms[39m
+2025-11-12 01:14:34:1434 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 01:14:34:1434 [33mwarn[39m: [33mGET /api/admin/users 404 - 5ms[39m
+2025-11-12 01:14:34:1434 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 01:14:34:1434 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 01:14:37:1437 [33mwarn[39m: [33mGET / 401 - 4ms[39m
+2025-11-12 01:14:37:1437 [33mwarn[39m: [33mGET / 401 - 10ms[39m
+2025-11-12 01:14:46:1446 [33mwarn[39m: [33mGET / 401 - 2ms[39m
+2025-11-12 01:14:48:1448 [33mwarn[39m: [33mGET / 401 - 2ms[39m
+2025-11-12 01:16:00:160 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-12 01:16:01:161 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-12 01:16:01:161 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 01:16:01:161 [33mwarn[39m: [33mGET /api/admin/donations 404 - 0ms[39m
+2025-11-12 01:16:02:162 [33mwarn[39m: [33mGET / 401 - 3ms[39m
+2025-11-12 01:16:02:162 [33mwarn[39m: [33mGET / 401 - 2ms[39m
+2025-11-12 01:16:10:1610 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-12 01:16:10:1610 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-12 01:16:10:1610 [33mwarn[39m: [33mGET /api/admin/donations 404 - 10ms[39m
+2025-11-12 01:16:10:1610 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-12 01:19:53:1953 [33mwarn[39m: [33mGET /api/admin/users 404 - 7ms[39m
+2025-11-12 01:19:53:1953 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 01:20:00:200 [33mwarn[39m: [33mGET / 401 - 3ms[39m
+2025-11-12 01:20:00:200 [33mwarn[39m: [33mGET / 401 - 1ms[39m
+2025-11-12 01:20:03:203 [33mwarn[39m: [33mGET /api/admin/users 404 - 6ms[39m
+2025-11-12 01:20:03:203 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 01:20:03:203 [33mwarn[39m: [33mGET /api/admin/donations 404 - 15ms[39m
+2025-11-12 01:20:04:204 [33mwarn[39m: [33mGET /api/admin/donations 404 - 6ms[39m
+2025-11-12 01:20:21:2021 [35mhttp[39m: [35mPOST /login 200 - 1099ms[39m
+2025-11-12 01:20:23:2023 [33mwarn[39m: [33mGET /my-donations 401 - 15ms[39m
+2025-11-12 01:20:23:2023 [33mwarn[39m: [33mGET /my-donations 401 - 6ms[39m
+2025-11-12 01:24:35:2435 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 01:24:35:2435 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 01:24:35:2435 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 01:54:15:5415 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 01:54:15:5415 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 01:54:15:5415 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 01:54:36:5436 [32minfo[39m: [32mSIGINT signal received: closing HTTP server[39m
+2025-11-12 01:55:14:5514 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 01:55:14:5514 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 01:55:14:5514 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 01:57:13:5713 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 01:57:13:5713 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 01:57:13:5713 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 01:58:22:5822 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 01:58:22:5822 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 01:58:22:5822 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 01:59:33:5933 [35mhttp[39m: [35mPOST /login 200 - 5542ms[39m
+2025-11-12 01:59:43:5943 [33mwarn[39m: [33mGET /api/admin/users 404 - 8ms[39m
+2025-11-12 01:59:43:5943 [33mwarn[39m: [33mGET /api/admin/donations 404 - 3ms[39m
+2025-11-12 01:59:43:5943 [33mwarn[39m: [33mGET /api/admin/users 404 - 5ms[39m
+2025-11-12 01:59:44:5944 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-12 01:59:58:5958 [33mwarn[39m: [33mGET /api/admin/donations 404 - 2ms[39m
+2025-11-12 01:59:58:5958 [33mwarn[39m: [33mGET /api/admin/donations 404 - 6ms[39m
+2025-11-12 02:00:18:018 [33mwarn[39m: [33mGET /api/admin/users 404 - 4ms[39m
+2025-11-12 02:00:18:018 [33mwarn[39m: [33mGET /api/admin/donations 404 - 3ms[39m
+2025-11-12 02:00:18:018 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 02:00:18:018 [33mwarn[39m: [33mGET /api/admin/donations 404 - 3ms[39m
+2025-11-12 02:00:25:025 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-12 02:00:25:025 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 02:00:43:043 [33mwarn[39m: [33mGET /api/admin/users 404 - 13ms[39m
+2025-11-12 02:00:43:043 [33mwarn[39m: [33mGET /api/admin/users 404 - 13ms[39m
+2025-11-12 02:00:43:043 [33mwarn[39m: [33mGET /api/admin/donations 404 - 10ms[39m
+2025-11-12 02:00:44:044 [33mwarn[39m: [33mGET /api/admin/donations 404 - 20ms[39m
+2025-11-12 02:00:49:049 [33mwarn[39m: [33mGET / 401 - 72ms[39m
+2025-11-12 02:00:49:049 [33mwarn[39m: [33mGET / 401 - 3ms[39m
+2025-11-12 02:00:52:052 [33mwarn[39m: [33mGET /api/admin/users 404 - 21ms[39m
+2025-11-12 02:00:52:052 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 02:00:52:052 [33mwarn[39m: [33mGET /api/admin/donations 404 - 18ms[39m
+2025-11-12 02:00:52:052 [33mwarn[39m: [33mGET /api/admin/donations 404 - 22ms[39m
+2025-11-12 02:01:12:112 [33mwarn[39m: [33mGET /api/admin/donations 404 - 25ms[39m
+2025-11-12 02:01:12:112 [33mwarn[39m: [33mGET /api/admin/donations 404 - 18ms[39m
+2025-11-12 02:01:19:119 [33mwarn[39m: [33mGET /api/admin/users 404 - 17ms[39m
+2025-11-12 02:01:19:119 [33mwarn[39m: [33mGET /api/admin/users 404 - 35ms[39m
+2025-11-12 02:01:19:119 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 02:01:19:119 [33mwarn[39m: [33mGET /api/admin/donations 404 - 47ms[39m
+2025-11-12 02:01:25:125 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-12 02:01:25:125 [33mwarn[39m: [33mGET /api/admin/users 404 - 35ms[39m
+2025-11-12 02:01:36:136 [33mwarn[39m: [33mGET /api/admin/users 404 - 6ms[39m
+2025-11-12 02:01:36:136 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 02:01:36:136 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 02:01:36:136 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 02:02:44:244 [35mhttp[39m: [35mPOST /login 200 - 802ms[39m
+2025-11-12 02:02:46:246 [33mwarn[39m: [33mGET /my-donations 401 - 4ms[39m
+2025-11-12 02:02:46:246 [33mwarn[39m: [33mGET /my-donations 401 - 3ms[39m
+2025-11-12 02:03:34:334 [35mhttp[39m: [35mPOST /login 200 - 539ms[39m
+2025-11-12 02:03:36:336 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-12 02:03:36:336 [33mwarn[39m: [33mGET /api/admin/users 404 - 1ms[39m
+2025-11-12 02:03:36:336 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 02:03:36:336 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 02:03:41:341 [33mwarn[39m: [33mGET /reports-stats 401 - 1ms[39m
+2025-11-12 02:03:41:341 [33mwarn[39m: [33mGET /reports-stats 401 - 1ms[39m
+2025-11-12 02:03:42:342 [35mhttp[39m: [35mGET /reports 200 - 221ms[39m
+2025-11-12 02:03:42:342 [35mhttp[39m: [35mGET /reports 304 - 12ms[39m
+2025-11-12 02:04:35:435 [33mwarn[39m: [33mPOST /reports 401 - 1ms[39m
+2025-11-12 02:04:42:442 [33mwarn[39m: [33mPOST /reports 401 - 3ms[39m
+2025-11-12 02:05:10:510 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 02:05:10:510 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 02:05:10:510 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 13:58:56:5856 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-12 13:58:56:5856 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-12 13:58:56:5856 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-12 14:00:27:027 [35mhttp[39m: [35mPOST /login 200 - 1698ms[39m
+2025-11-12 14:00:29:029 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 14:00:29:029 [33mwarn[39m: [33mGET /api/admin/users 404 - 2ms[39m
+2025-11-12 14:00:29:029 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 14:00:29:029 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 14:01:00:10 [33mwarn[39m: [33mGET /api/admin/users 404 - 3ms[39m
+2025-11-12 14:01:00:10 [33mwarn[39m: [33mGET /api/admin/donations 404 - 1ms[39m
+2025-11-12 14:01:24:124 [33mwarn[39m: [33mGET /reports-stats 401 - 2ms[39m
+2025-11-12 14:01:24:124 [33mwarn[39m: [33mGET /reports-stats 401 - 1ms[39m
+2025-11-12 14:01:24:124 [35mhttp[39m: [35mGET /reports 200 - 179ms[39m
+2025-11-12 14:01:24:124 [35mhttp[39m: [35mGET /reports 304 - 5ms[39m
+2025-11-12 14:01:54:154 [33mwarn[39m: [33mPOST /reports 401 - 1ms[39m
+2025-11-12 14:02:47:247 [35mhttp[39m: [35mPOST /login 200 - 615ms[39m
+2025-11-12 14:02:49:249 [33mwarn[39m: [33mGET /my-donations 401 - 9ms[39m
+2025-11-12 14:02:49:249 [33mwarn[39m: [33mGET /my-donations 401 - 3ms[39m
+2025-11-12 14:03:13:313 [33mwarn[39m: [33mGET /reports-stats 401 - 2ms[39m
+2025-11-12 14:03:13:313 [33mwarn[39m: [33mGET /reports-stats 401 - 2ms[39m
+2025-11-12 14:03:13:313 [35mhttp[39m: [35mGET /reports 304 - 21ms[39m
+2025-11-12 14:03:13:313 [35mhttp[39m: [35mGET /reports 304 - 13ms[39m
+2025-11-12 14:03:14:314 [33mwarn[39m: [33mGET /my-donations 401 - 1ms[39m
+2025-11-12 14:03:14:314 [33mwarn[39m: [33mGET /my-donations 401 - 3ms[39m
+2025-11-12 14:04:12:412 [35mhttp[39m: [35mPOST /register 201 - 709ms[39m

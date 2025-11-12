@@ -18,5 +18,19 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
+    // Force cache clearing
+    headers: {
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+    },
+  },
+  build: {
+    // Force new build on changes
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name].[hash].js`,
+        chunkFileNames: `assets/[name].[hash].js`,
+        assetFileNames: `assets/[name].[hash].[ext]`
+      }
+    }
   },
 });

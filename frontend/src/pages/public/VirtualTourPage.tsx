@@ -23,7 +23,7 @@ export default function VirtualTourPage() {
             Explore Our Impact
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Virtual Tour
+            <span className="text-amber-200">Virtual</span> Tour
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             Take a virtual journey through our projects and see firsthand the lives being transformed.

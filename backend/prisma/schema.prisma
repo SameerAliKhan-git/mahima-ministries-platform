@@ -51,6 +51,21 @@ enum InquiryStatus {
   CLOSED
 }
 
+enum ReportType {
+  FINANCIAL
+  ANNUAL
+  AUDIT
+  IMPACT
+  QUARTERLY
+  OTHER
+}
+
+enum ReportStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
 model User {
   id                String    @id @default(cuid())
   email             String    @unique
@@ -105,10 +120,28 @@ model Donation {
   userId            String?
   amount            Decimal         @db.Decimal(10, 2)
   currency          String          @default("INR")
-  status            DonationStatus  @default(PENDING)
-  paymentMethod     String          @default("stripe")
+  paymentStatus     String          @default("PENDING")  // PENDING, COMPLETED, FAILED, REFUNDED
+  paymentMethod     String          @default("PAYTM")    // PAYTM, UPI, CARD, etc.
+  
+  // Donor information
+  donorName         String
+  email             String
+  phone             String
+  
+  // Paytm payment fields
+  orderId           String?         @unique            // Unique order ID for Paytm
+  txnId             String?         @unique            // Paytm transaction ID
+  paymentMode       String?                            // CC, DC, NB, UPI, PPI, etc.
+  bankTxnId         String?                            // Bank transaction ID
+  gatewayResponse   String?         @db.Text           // Full gateway response JSON
+  paidAt            DateTime?                          // Payment completion timestamp
+  
+  // Legacy fields (for backward compatibility)
   paymentIntentId   String?         @unique
   transactionId     String?
+  status            DonationStatus  @default(PENDING)
+  
+  // Donation details
   isRecurring       Boolean         @default(false)
   recurringInterval RecurringInterval?
   isAnonymous       Boolean         @default(false)
@@ -128,6 +161,8 @@ model Donation {
 
   @@index([userId])
   @@index([status])
+  @@index([paymentStatus])
+  @@index([orderId])
   @@index([createdAt])
   @@index([campaignId])
 }
@@ -206,6 +241,28 @@ model ContactInquiry {
   createdAt DateTime      @default(now())
 
   @@index([status])
+  @@index([createdAt])
+}
+
+model Report {
+  id          String       @id @default(cuid())
+  title       String
+  description String?
+  reportType  ReportType
+  fiscalYear  String?      // e.g., "2024-2025", "Q1-2024"
+  fileUrl     String       // URL/path to the PDF file
+  fileName    String       // Original filename
+  fileSize    Int          // File size in bytes
+  status      ReportStatus @default(PUBLISHED)
+  uploadedBy  String?      // Admin user ID
+  publishedAt DateTime?
+  viewCount   Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@index([reportType])
+  @@index([status])
+  @@index([publishedAt])
   @@index([createdAt])
 }
 

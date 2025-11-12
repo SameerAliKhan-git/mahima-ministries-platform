@@ -5,8 +5,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { Eye, EyeOff, CheckCircle2 } from 'lucide-react';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
@@ -22,6 +24,10 @@ export default function RegisterPage() {
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -82,8 +88,20 @@ export default function RegisterPage() {
       localStorage.setItem('refreshToken', data.data.tokens.refreshToken);
       localStorage.setItem('user', JSON.stringify(data.data.user));
 
-      // Redirect to dashboard
-      navigate('/donor/dashboard');
+      // Show success dialog
+      setSuccessMessage(`Account created successfully! Welcome ${formData.firstName}!`);
+      setShowSuccessDialog(true);
+
+      // Redirect based on role after a short delay
+      setTimeout(() => {
+        if (data.data.user.role === 'ADMIN') {
+          navigate('/admin/dashboard');
+        } else if (data.data.user.role === 'PARTNER') {
+          navigate('/partner/dashboard');
+        } else {
+          navigate('/donor/dashboard');
+        }
+      }, 1500);
     } catch (err: any) {
       setError(err.message || 'An error occurred during registration');
     } finally {
@@ -99,14 +117,14 @@ export default function RegisterPage() {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-white to-emerald-50 px-4 py-8 relative overflow-hidden">
+      <div className="flex-grow flex items-center justify-center bg-gradient-to-br from-emerald-50 via-white to-purple-50 px-4 py-12 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 right-20 w-64 h-64 gradient-emerald opacity-20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 left-20 w-80 h-80 gradient-sunset opacity-20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
-      </div>
+          <div className="absolute top-10 right-20 w-64 h-64 gradient-emerald opacity-20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 left-20 w-80 h-80 gradient-sunset opacity-20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        </div>
 
       <Card className="w-full max-w-md glass shadow-2xl border-2 border-emerald-100 relative z-10">
         <CardHeader className="space-y-1 text-center">
@@ -179,17 +197,27 @@ export default function RegisterPage() {
 
             <div className="space-y-2">
               <Label htmlFor="password" className="text-gray-700 font-semibold">Password</Label>
-              <Input
-                id="password"
-                name="password"
-                type="password"
-                placeholder="••••••••"
-                value={formData.password}
-                onChange={handleChange}
-                required
-                disabled={loading}
-                className="h-11 border-emerald-200 focus:border-emerald-400 focus:ring-emerald-400"
-              />
+              <div className="relative">
+                <Input
+                  id="password"
+                  name="password"
+                  type={showPassword ? 'text' : 'password'}
+                  placeholder="••••••••"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                  disabled={loading}
+                  className="h-11 border-emerald-200 focus:border-emerald-400 focus:ring-emerald-400 pr-10"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors"
+                  disabled={loading}
+                >
+                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                </button>
+              </div>
               <p className="text-xs text-gray-500 flex items-center">
                 <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
@@ -200,17 +228,27 @@ export default function RegisterPage() {
 
             <div className="space-y-2">
               <Label htmlFor="confirmPassword" className="text-gray-700 font-semibold">Confirm Password</Label>
-              <Input
-                id="confirmPassword"
-                name="confirmPassword"
-                type="password"
-                placeholder="••••••••"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                required
-                disabled={loading}
-                className="h-11 border-emerald-200 focus:border-emerald-400 focus:ring-emerald-400"
-              />
+              <div className="relative">
+                <Input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type={showConfirmPassword ? 'text' : 'password'}
+                  placeholder="••••••••"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  required
+                  disabled={loading}
+                  className="h-11 border-emerald-200 focus:border-emerald-400 focus:ring-emerald-400 pr-10"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors"
+                  disabled={loading}
+                >
+                  {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                </button>
+              </div>
             </div>
 
             <div className="space-y-2">
@@ -264,8 +302,26 @@ export default function RegisterPage() {
           </Link>
         </CardFooter>
       </Card>
-      <Footer />
       </div>
-    </>
+      <Footer />
+
+      {/* Success Dialog */}
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+              <CheckCircle2 className="w-10 h-10 text-green-600" />
+            </div>
+            <DialogTitle className="text-center text-2xl">Registration Successful!</DialogTitle>
+            <DialogDescription className="text-center text-base pt-2">
+              {successMessage}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex items-center justify-center py-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 }

@@ -23,7 +23,7 @@ A comprehensive full-stack donation and community management platform built for 
 ## ✨ Key Features
 
 ### 💳 For Donors
-- ✅ Secure donation system with DANAMOJO integration (Indian payment gateway)
+- ✅ Secure donation system with Paytm Payment Gateway (Indian payment gateway)
 - ✅ Recurring donations (monthly/quarterly/annually)
 - ✅ Anonymous donation option
 - ✅ Dedication messages for donations
@@ -177,12 +177,13 @@ http://localhost:4040
 | **Nodemailer** | Latest | Email service |
 | **Winston** | Latest | Logging |
 | **Helmet** | Latest | Security headers |
-| **DANAMOJO** | Latest | Indian payment gateway |
+| **Paytm** | Latest | Indian payment gateway |
+| **pdfkit** | Latest | PDF receipt generation |
+| **form-data** | Latest | WhatsApp media uploads |
 
 ### DevOps & Tools
 | Technology | Purpose |
 |------------|---------|
-| **ngrok** | Remote access tunneling |
 | **Prisma Studio** | Database GUI |
 | **ESLint** | Code linting |
 | **Prettier** | Code formatting |
@@ -290,9 +291,9 @@ POST /api/auth/logout           # Logout user
 POST /api/donations             # Create donation
 GET /api/donations              # Get user's donations (auth required)
 GET /api/donations/:id          # Get specific donation
-POST /api/donations/create-payment  # Create DANAMOJO payment
-POST /api/donations/webhook     # DANAMOJO webhook handler
-POST /api/donations/verify      # Verify payment status
+POST /api/paytm/initiate        # Initiate Paytm payment
+POST /api/paytm/callback        # Paytm callback handler
+GET /api/paytm/status           # Check transaction status
 ```
 
 ### Contact & Partnerships
@@ -312,7 +313,7 @@ Content-Type: application/json
 {
   "amount": 5000,
   "currency": "INR",
-  "paymentMethod": "DANAMOJO",
+  "paymentMethod": "PAYTM",
   "isRecurring": true,
   "frequency": "MONTHLY",
   "isAnonymous": false,
@@ -371,7 +372,8 @@ NODE_ENV=production npm start
 - [ ] Update `DATABASE_URL` with production PostgreSQL
 - [ ] Set `NODE_ENV=production`
 - [ ] Configure production `FRONTEND_URL`
-- [ ] Add real DANAMOJO API keys (Merchant ID, API Key)
+- [ ] Add real Paytm API keys (Merchant ID, Merchant Key)
+- [ ] Add Meta WhatsApp Business API credentials (Access Token, Phone Number ID)
 - [ ] Configure 80G certificate details
 - [ ] Configure Gmail app password for SMTP
 - [ ] Set up SSL certificates (HTTPS)
@@ -380,7 +382,7 @@ NODE_ENV=production npm start
 - [ ] Enable error monitoring (Sentry, etc.)
 - [ ] Configure automated backups
 - [ ] Set up CI/CD pipeline
-- [ ] Test DANAMOJO webhook endpoint
+- [ ] Test Paytm callback endpoint
 - [ ] Configure payment reconciliation
 
 ### Deployment Options
@@ -493,16 +495,16 @@ NODE_ENV=production npm start
 - ✅ Remote access via ngrok
 - ✅ Custom branding & logo
 
-### 🔄 In Progress (Phase 4)
-- 🔄 DANAMOJO API integration
-- 🔄 Gmail SMTP setup
-- 🔄 ngrok authentication
-- 🔄 Admin dashboard UI enhancements
+### ✅ Recently Completed (Phase 4)
+- ✅ Paytm Payment Gateway integration
+- ✅ Meta WhatsApp Business API integration (official)
+- ✅ Automated receipt system (PDF + Email + WhatsApp)
+- ✅ Google reCAPTCHA security
+- ✅ Gmail SMTP setup
 
 ### ⏳ Planned (Phase 5+)
-- ⏳ Payment reconciliation reports with DANAMOJO
-- ⏳ Complete 80G receipt automation
-- ⏳ WhatsApp API integration (Twilio)
+- ⏳ Payment reconciliation dashboard
+- ⏳ Admin analytics enhancements
 - ⏳ Campaign management module
 - ⏳ Mobile app (React Native)
 - ⏳ Advanced analytics dashboard
@@ -535,8 +537,9 @@ NODE_ENV=production npm start
 - **[shadcn/ui](https://ui.shadcn.com/)** - Beautiful UI components
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS
 - **[Express.js](https://expressjs.com/)** - Web framework
-- **[DANAMOJO](https://danamojo.org/)** - Indian NGO payment gateway
-- **[ngrok](https://ngrok.com/)** - Secure tunneling
+- **[Paytm](https://business.paytm.com/)** - Indian payment gateway
+- **[Meta WhatsApp](https://developers.facebook.com/products/whatsapp/)** - WhatsApp Business API
+- **[pdfkit](https://pdfkit.org/)** - PDF generation
 
 ### Contributors
 - All open-source contributors who made this possible

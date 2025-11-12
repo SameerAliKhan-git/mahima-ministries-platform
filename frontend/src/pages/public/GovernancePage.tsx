@@ -23,7 +23,7 @@ export default function GovernancePage() {
             Transparency & Accountability
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Our Governance
+            Our <span className="text-amber-200">Governance</span>
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             How we ensure responsible stewardship of your donations and maintain the highest standards of integrity

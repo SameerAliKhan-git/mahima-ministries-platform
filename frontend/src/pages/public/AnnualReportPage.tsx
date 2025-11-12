@@ -23,7 +23,7 @@ export default function AnnualReportPage() {
             Transparency & Impact
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Annual Reports
+            <span className="text-amber-200">Annual</span> Reports
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             View our yearly impact reports, financial statements, and program achievements.

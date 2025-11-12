@@ -25,7 +25,7 @@ export default function AboutUsPage() {
             Who We Are
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            About Mahima Ministries
+            <span className="text-amber-200">About</span> Mahima Ministries
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             Caring for and touching the lives of people who are in distress since 2005
@@ -239,7 +239,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-orange-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_01NoPoverty.svg.png" alt="SDG 1: No Poverty" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_01NoPoverty.svg.png" alt="SDG 1: No Poverty" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">No Poverty</p>
                     </div>
                   </div>
@@ -257,7 +257,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-amber-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_02ZeroHunger.svg.png" alt="SDG 2: Zero Hunger" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_02ZeroHunger.svg.png" alt="SDG 2: Zero Hunger" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Zero Hunger</p>
                     </div>
                   </div>
@@ -275,7 +275,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-orange-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_03GoodHealth.svg.png" alt="SDG 3: Good Health" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_03GoodHealth.svg.png" alt="SDG 3: Good Health" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Good Health</p>
                     </div>
                   </div>
@@ -293,7 +293,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-amber-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_04QualityEducation.svg.png" alt="SDG 4: Quality Education" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_04QualityEducation.svg.png" alt="SDG 4: Quality Education" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Quality Education</p>
                     </div>
                   </div>
@@ -311,7 +311,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-orange-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_05GenderEquality.svg.png" alt="SDG 5: Gender Equality" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_05GenderEquality.svg.png" alt="SDG 5: Gender Equality" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Gender Equality</p>
                     </div>
                   </div>
@@ -329,7 +329,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-amber-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_08DecentWork.svg.png" alt="SDG 8: Decent Work" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_08DecentWork.svg.png" alt="SDG 8: Decent Work" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Decent Work</p>
                     </div>
                   </div>
@@ -347,7 +347,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-orange-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_10ReducedInequalities.svg.png" alt="SDG 10: Reduced Inequalities" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_10ReducedInequalities.svg.png" alt="SDG 10: Reduced Inequalities" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Reduced Inequalities</p>
                     </div>
                   </div>
@@ -365,7 +365,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-amber-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_11SustainableCities.svg.png" alt="SDG 11: Sustainable Communities" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_11SustainableCities.svg.png" alt="SDG 11: Sustainable Communities" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Sustainable Communities</p>
                     </div>
                   </div>
@@ -383,7 +383,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-orange-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_16PeaceJusticeInstitutions.svg.png" alt="SDG 16: Peace & Justice" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_16PeaceJusticeInstitutions.svg.png" alt="SDG 16: Peace & Justice" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Peace & Justice</p>
                     </div>
                   </div>
@@ -401,7 +401,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full aspect-square transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="glass p-3 rounded-xl border-2 border-amber-100 h-full flex flex-col">
-                      <img src="/sdgs/Sustainable_Development_Goal_17Partnerships.svg.png" alt="SDG 17: Partnerships" className="w-full rounded-lg mb-2" />
+                      <img src="/sdgs/Sustainable_Development_Goal_17Partnerships.svg.png" alt="SDG 17: Partnerships" className="w-full rounded-lg mb-2" loading="lazy" />
                       <p className="text-xs text-center font-semibold text-gray-700">Partnerships</p>
                     </div>
                   </div>

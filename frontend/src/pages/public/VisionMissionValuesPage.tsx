@@ -24,7 +24,7 @@ export default function VisionMissionValuesPage() {
             Our Purpose
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Vision | Mission | Values
+            <span className="text-amber-200">Vision</span> | <span className="text-amber-200">Mission</span> | <span className="text-amber-200">Values</span>
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             Our guiding principles that shape every decision and action we take

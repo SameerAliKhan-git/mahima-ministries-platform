@@ -16,6 +16,7 @@ export default function HomePage() {
             src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
             alt="Community helping hands" 
             className="w-full h-full object-cover"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 via-orange-800/70 to-amber-900/80"></div>
         </div>

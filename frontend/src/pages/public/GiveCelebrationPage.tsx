@@ -24,7 +24,7 @@ export default function GiveCelebrationPage() {
             Celebrate with Purpose
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
-            Give in Celebration
+            Give in <span className="text-amber-200">Celebration</span>
           </h1>
           <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             Mark life's special moments by making a difference. Celebrate birthdays, weddings, and milestones with a gift that transforms lives.

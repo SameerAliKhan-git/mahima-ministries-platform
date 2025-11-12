@@ -5,6 +5,9 @@ import userRoutes from './user.routes';
 import adminRoutes from './admin.routes';
 import contactRoutes from './contact.routes';
 import partnershipRoutes from './partnership.routes';
+import paytmRoutes from './paytm.routes';
+import analyticsRoutes from './analytics.routes';
+import reportRoutes from './report.routes';
 
 const router = Router();
 
@@ -15,6 +18,9 @@ router.use('/users', userRoutes);
 router.use('/admin', adminRoutes);
 router.use('/contact', contactRoutes);
 router.use('/partnerships', partnershipRoutes);
+router.use('/paytm', paytmRoutes);
+router.use('/analytics', analyticsRoutes);
+router.use('/', reportRoutes);
 
 // CSRF token endpoint
 router.get('/csrf-token', (req, res) => {

@@ -6,11 +6,26 @@ dotenv.config({
   path: path.resolve(__dirname, '../../.env'),
 });
 
+const parseOrigins = () => {
+  const rawOrigins = process.env.ALLOWED_ORIGINS;
+  if (!rawOrigins) {
+    return [] as string[];
+  }
+
+  return rawOrigins
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter((origin) => Boolean(origin));
+};
+
+const defaultFrontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+
 export const config = {
   // Server
   nodeEnv: process.env.NODE_ENV || 'development',
   port: parseInt(process.env.PORT || '3000', 10),
-  frontendUrl: process.env.FRONTEND_URL || 'http://localhost:5173',
+  frontendUrl: defaultFrontendUrl,
+  frontendOrigins: parseOrigins().length > 0 ? parseOrigins() : [defaultFrontendUrl],
 
   // Database
   databaseUrl: process.env.DATABASE_URL || 'file:./dev.db',
@@ -29,8 +44,8 @@ export const config = {
   smtp: {
     host: process.env.SMTP_HOST || 'smtp.ethereal.email',
     port: parseInt(process.env.SMTP_PORT || '587', 10),
-    user: process.env.SMTP_USER || '',
-    pass: process.env.SMTP_PASS || '',
+  user: process.env.SMTP_USER || '',
+  pass: process.env.SMTP_PASSWORD || process.env.SMTP_PASS || '',
   },
   emailFrom: process.env.EMAIL_FROM || 'noreply@nonprofit.org',
 

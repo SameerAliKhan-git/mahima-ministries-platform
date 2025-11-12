@@ -17,9 +17,15 @@ const WhatsAppLogo = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   return (
-    <footer className="relative mt-auto bg-gradient-to-br from-orange-500 via-orange-600 to-amber-600">
+    <footer className="relative mt-auto bg-gradient-to-br from-orange-600 via-orange-700 to-amber-700 backdrop-blur-lg">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+      </div>
+
       {/* Main Footer Content */}
-      <div className="py-12">
+      <div className="py-16 relative z-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6">
             
@@ -27,12 +33,12 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <h3 className="text-sm font-extrabold text-white mb-4 pb-2 uppercase tracking-wider border-b-2 border-white/30">WHO WE ARE</h3>
               <ul className="space-y-2">
-                <li><Link to="/about-us" className="group relative text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center py-1 px-3 rounded-lg hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg"><span className="opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">About Us</span></Link></li>
-                <li><Link to="/vision-mission-values" className="group relative text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center py-1 px-3 rounded-lg hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg"><span className="opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Vision Mission & Values</span></Link></li>
-                <li><Link to="/governance" className="group relative text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center py-1 px-3 rounded-lg hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg"><span className="opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Our Governance</span></Link></li>
-                <li><Link to="/financial-information" className="group relative text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center py-1 px-3 rounded-lg hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg"><span className="opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Financial Information</span></Link></li>
-                <li><Link to="/child-safeguarding" className="group relative text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center py-1 px-3 rounded-lg hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg"><span className="opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Child Safeguarding</span></Link></li>
-                <li><Link to="/virtual-tour" className="group relative text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center py-1 px-3 rounded-lg hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg"><span className="opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Virtual Tour</span></Link></li>
+                <li><Link to="/about-us" className="group relative text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">About Us</span></Link></li>
+                <li><Link to="/vision-mission-values" className="group relative text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Vision Mission & Values</span></Link></li>
+                <li><Link to="/governance" className="group relative text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Our Governance</span></Link></li>
+                <li><Link to="/financial-information" className="group relative text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Financial Information</span></Link></li>
+                <li><Link to="/child-safeguarding" className="group relative text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Child Safeguarding</span></Link></li>
+                <li><Link to="/virtual-tour" className="group relative text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out mr-2 text-amber-200">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Virtual Tour</span></Link></li>
               </ul>
             </div>
 
@@ -40,10 +46,10 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <h3 className="text-sm font-extrabold text-white mb-4 pb-2 uppercase tracking-wider border-b-2 border-white/30">OUR WORK</h3>
               <ul className="space-y-2">
-                <li><Link to="/programmes" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Our Programmes</span></Link></li>
-                <li><Link to="/where-we-work" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Where We Work</span></Link></li>
-                <li><Link to="/vocational-training" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Vocational Training Centre</span></Link></li>
-                <li><Link to="/higher-education-support" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Higher Education Support</span></Link></li>
+                <li><Link to="/programmes" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Our Programmes</span></Link></li>
+                <li><Link to="/where-we-work" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Where We Work</span></Link></li>
+                <li><Link to="/vocational-training" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Vocational Training Centre</span></Link></li>
+                <li><Link to="/higher-education-support" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Higher Education Support</span></Link></li>
               </ul>
             </div>
 
@@ -51,12 +57,12 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <h3 className="text-sm font-extrabold text-white mb-4 pb-2 uppercase tracking-wider border-b-2 border-white/30">WAYS TO GIVE</h3>
               <ul className="space-y-2">
-                <li><Link to="/donate" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Make a Donation</span></Link></li>
-                <li><Link to="/sponsorship" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Child Sponsorship</span></Link></li>
-                <li><Link to="/partnership" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Corporate Partnership</span></Link></li>
-                <li><Link to="/give-celebration" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Give in Celebration</span></Link></li>
-                <li><Link to="/philanthropy" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Philanthropy</span></Link></li>
-                <li><Link to="/other-ways-to-give" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Other Ways to Give</span></Link></li>
+                <li><Link to="/donate" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Make a Donation</span></Link></li>
+                <li><Link to="/sponsorship" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Child Sponsorship</span></Link></li>
+                <li><Link to="/partnership" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Corporate Partnership</span></Link></li>
+                <li><Link to="/give-celebration" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Give in Celebration</span></Link></li>
+                <li><Link to="/philanthropy" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Philanthropy</span></Link></li>
+                <li><Link to="/other-ways-to-give" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Other Ways to Give</span></Link></li>
               </ul>
             </div>
 
@@ -64,24 +70,24 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <h3 className="text-sm font-extrabold text-white mb-4 pb-2 uppercase tracking-wider border-b-2 border-white/30">RESOURCES</h3>
               <ul className="space-y-2">
-                <li><Link to="/annual-report" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Annual Report</span></Link></li>
-                <li><Link to="/blog" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Blog</span></Link></li>
-                <li><Link to="/media" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Media</span></Link></li>
-                <li><Link to="/faqs" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">FAQs</span></Link></li>
-                <li><Link to="/contact" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Careers</span></Link></li>
-                <li><Link to="/contact" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Contact</span></Link></li>
-                <li><Link to="/contact" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Sitemap</span></Link></li>
-                <li><Link to="/donor/dashboard" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Donor Portal</span></Link></li>
-                <li><Link to="/login" className="group text-white/90 hover:text-white transition-all duration-300 text-sm inline-flex items-center"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-300">Login</span></Link></li>
+                <li><Link to="/annual-report" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Annual Report</span></Link></li>
+                <li><Link to="/blog" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Blog</span></Link></li>
+                <li><Link to="/media" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Media</span></Link></li>
+                <li><Link to="/faqs" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">FAQs</span></Link></li>
+                <li><Link to="/careers" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Careers</span></Link></li>
+                <li><Link to="/contact" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Contact</span></Link></li>
+                <li><Link to="/contact" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Sitemap</span></Link></li>
+                <li><Link to="/donor/dashboard" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Donor Portal</span></Link></li>
+                <li><Link to="/login" className="group text-white/90 hover:text-white text-sm inline-flex items-center py-2 px-3 rounded-lg transition-all duration-500 ease-out"><span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out mr-1">→</span><span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">Login</span></Link></li>
               </ul>
             </div>
 
             {/* Column 5: MAHIMA MINISTRIES INDIA */}
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-2">
               <h3 className="text-sm font-extrabold text-white mb-4 pb-2 uppercase tracking-wider border-b-2 border-white/30">MAHIMA MINISTRIES</h3>
               <div className="space-y-3">
                 <div className="flex items-start space-x-2">
-                  <MapPin className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5" />
                   <p className="text-white/90 text-sm leading-relaxed">
                     2-38/8/2/9/4/1, NTR Nagar Colony<br />
                     Sridevi Theatre Road, Chandanagar<br />
@@ -90,77 +96,78 @@ export default function Footer() {
                   </p>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-white flex-shrink-0" />
-                  <Link to="/where-we-work" className="text-white/90 hover:text-white transition-colors text-sm">Location Map</Link>
+                  <MapPin className="w-4 h-4 text-amber-300 flex-shrink-0" />
+                  <Link to="/where-we-work" className="text-white/90 hover:text-white text-sm py-2 px-3 rounded transition-all duration-500 ease-out inline-block">Location Map</Link>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <Phone className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
+                  <Phone className="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5" />
                   <div className="text-white/90 text-sm">
-                    <a href="tel:04023032675" className="hover:text-white transition-colors block">040-23032675</a>
-                    <a href="tel:9246272675" className="hover:text-white transition-colors block">9246272675</a>
-                    <a href="tel:9246332264" className="hover:text-white transition-colors block">9246332264</a>
+                    <a href="tel:04023032675" className="hover:text-white block transition-colors duration-500 ease-out">040-23032675</a>
+                    <a href="tel:9246272675" className="hover:text-white block transition-colors duration-500 ease-out">9246272675</a>
+                    <a href="tel:9246332264" className="hover:text-white block transition-colors duration-500 ease-out">9246332264</a>
                   </div>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <Mail className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
-                  <div className="text-white/90 text-sm">
-                    <a href="mailto:mahimaministriesindia@gmail.com" className="hover:text-white transition-colors block whitespace-nowrap">mahimaministriesindia@gmail.com</a>
-                    <a href="mailto:rdmaharaju@gmail.com" className="hover:text-white transition-colors block whitespace-nowrap">rdmaharaju@gmail.com</a>
-                  </div>
-                </div>
-                
-                {/* Social Media */}
-                <div className="mt-6 pt-4 border-t border-white/20">
-                  <h4 className="text-xs font-extrabold text-white mb-3 uppercase tracking-wider">CONNECT WITH US</h4>
-                  <div className="flex flex-wrap gap-3">
-                    <a 
-                      href="https://facebook.com/mahimaministries" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="group relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-blue-600 flex items-center justify-center transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/50"
-                      aria-label="Follow us on Facebook"
-                    >
-                      <Facebook className="w-5 h-5 text-white transition-all duration-300 group-hover:scale-110" />
-                    </a>
-                    <a 
-                      href="https://instagram.com/mahimaministries" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="group relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 flex items-center justify-center transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-500/50"
-                      aria-label="Follow us on Instagram"
-                    >
-                      <Instagram className="w-5 h-5 text-white transition-all duration-300 group-hover:scale-110" />
-                    </a>
-                    <a 
-                      href="https://x.com/mahimaministries" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="group relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-black flex items-center justify-center transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-900/50"
-                      aria-label="Follow us on X"
-                    >
-                      <XLogo className="w-4 h-4 text-white transition-all duration-300 group-hover:scale-110" />
-                    </a>
-                    <a 
-                      href="https://linkedin.com/company/mahimaministries" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="group relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-blue-700 flex items-center justify-center transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-700/50"
-                      aria-label="Connect on LinkedIn"
-                    >
-                      <Linkedin className="w-5 h-5 text-white transition-all duration-300 group-hover:scale-110" />
-                    </a>
-                    <a 
-                      href="https://wa.me/919246272675" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="group relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-green-500 flex items-center justify-center transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/50"
-                      aria-label="Chat on WhatsApp"
-                    >
-                      <WhatsAppLogo className="w-5 h-5 text-white transition-all duration-300 group-hover:scale-110" />
-                    </a>
-                  </div>
+                  <Mail className="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5" />
+                  <a href="mailto:mahimaministriesindia@gmail.com" className="text-white/90 hover:text-white text-sm transition-colors duration-500 ease-out whitespace-nowrap">mahimaministriesindia@gmail.com</a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Social Media Section */}
+      <div className="bg-black/10 py-8 border-t border-white/20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center justify-center gap-6">
+            <h4 className="text-sm font-extrabold text-white uppercase tracking-wider">CONNECT WITH US ON SOCIAL MEDIA</h4>
+            <div className="flex flex-wrap gap-6 justify-center">
+              <a 
+                href="https://facebook.com/mahimaministries" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group relative w-14 h-14 rounded-full bg-transparent flex items-center justify-center transition-all duration-500 ease-out hover:bg-blue-600 hover:scale-110"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook className="w-7 h-7 text-white/70 transition-all duration-500 ease-out group-hover:text-white" />
+              </a>
+              <a 
+                href="https://instagram.com/mahimaministries" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group relative w-14 h-14 rounded-full bg-transparent flex items-center justify-center transition-all duration-500 ease-out hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 hover:scale-110"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="w-7 h-7 text-white/70 transition-all duration-500 ease-out group-hover:text-white" />
+              </a>
+              <a 
+                href="https://x.com/mahimaministries" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group relative w-14 h-14 rounded-full bg-transparent flex items-center justify-center transition-all duration-500 ease-out hover:bg-black hover:scale-110"
+                aria-label="Follow us on X"
+              >
+                <XLogo className="w-6 h-6 text-white/70 transition-all duration-500 ease-out group-hover:text-white" />
+              </a>
+              <a 
+                href="https://linkedin.com/company/mahimaministries" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group relative w-14 h-14 rounded-full bg-transparent flex items-center justify-center transition-all duration-500 ease-out hover:bg-blue-700 hover:scale-110"
+                aria-label="Connect on LinkedIn"
+              >
+                <Linkedin className="w-7 h-7 text-white/70 transition-all duration-500 ease-out group-hover:text-white" />
+              </a>
+              <a 
+                href="https://wa.me/919246272675" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group relative w-14 h-14 rounded-full bg-transparent flex items-center justify-center transition-all duration-500 ease-out hover:bg-green-500 hover:scale-110"
+                aria-label="Chat on WhatsApp"
+              >
+                <WhatsAppLogo className="w-6 h-6 text-white/70 transition-all duration-500 ease-out group-hover:text-white" />
+              </a>
             </div>
           </div>
         </div>
