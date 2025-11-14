@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { 
   CreditCard, 
   User, 
@@ -8,8 +7,7 @@ import {
   Heart, 
   MessageSquare,
   AlertCircle,
-  Loader2,
-  CheckCircle
+  Loader2
 } from 'lucide-react';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
@@ -33,11 +31,9 @@ interface PaymentFormData {
 }
 
 const PaytmPayment: React.FC = () => {
-  const navigate = useNavigate();
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
 
   const [formData, setFormData] = useState<PaymentFormData>({
     amount: '',
@@ -214,14 +210,7 @@ const PaytmPayment: React.FC = () => {
             </div>
           )}
 
-          {success && (
-            <div className="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                <p className="text-green-700">Payment initiated successfully! Redirecting to payment gateway...</p>
-              </div>
-            </div>
-          )}
+
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Donation Amount */}

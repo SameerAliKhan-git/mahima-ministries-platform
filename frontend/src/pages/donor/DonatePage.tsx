@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js';
@@ -13,10 +13,9 @@ import Footer from '@/components/layout/Footer';
 const API_URL = 'http://localhost:3000';
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder');
 
-function DonationForm({ clientSecret }: { clientSecret: string }) {
+function DonationForm({ }: { clientSecret: string }) {
   const stripe = useStripe();
   const elements = useElements();
-  const navigate = useNavigate();
   const [error, setError] = useState('');
   const [processing, setProcessing] = useState(false);
 

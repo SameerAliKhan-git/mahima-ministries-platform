@@ -1,6 +1,6 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { BookOpen, Calendar, User, Tag } from 'lucide-react';
+import { Calendar, User } from 'lucide-react';
 
 export default function BlogPage() {
   return (

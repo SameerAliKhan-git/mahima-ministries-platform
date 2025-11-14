@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 // Custom X (Twitter) Logo Component
 const XLogo = ({ className }: { className?: string }) => (

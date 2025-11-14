@@ -1,6 +1,6 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { GraduationCap, Home, Utensils, BookOpen, Heart, Users, Award, TrendingUp } from 'lucide-react';
+import { GraduationCap, Home, BookOpen, Heart, Users, Award, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function HigherEducationSupportPage() {

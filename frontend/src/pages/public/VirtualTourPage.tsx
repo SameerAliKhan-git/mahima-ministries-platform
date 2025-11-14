@@ -1,6 +1,6 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Play, Image as ImageIcon, MapPin, Users } from 'lucide-react';
+import { Play, Image as ImageIcon, MapPin } from 'lucide-react';
 
 export default function VirtualTourPage() {
   return (

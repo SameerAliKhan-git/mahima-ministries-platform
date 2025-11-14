@@ -1,6 +1,6 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Building, Heart, Award, TrendingUp } from 'lucide-react';
+import { Building, Heart, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function PhilanthropyPage() {

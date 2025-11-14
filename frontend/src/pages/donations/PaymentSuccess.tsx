@@ -39,7 +39,7 @@ const PaymentSuccess: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   const orderId = searchParams.get('orderId');
-  const donationId = searchParams.get('donationId');
+  // const donationId = searchParams.get('donationId');
 
   useEffect(() => {
     if (orderId) {
