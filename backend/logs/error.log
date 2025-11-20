@@ -84,3 +84,75 @@
 [31mArgument `firstName` is missing.[39m
 2025-11-11 01:23:03:233 [31merror[39m: [31mPOST /api/auth/register 500 - 502ms[39m
 2025-11-11 17:23:30:2330 [31merror[39m: [31mError: CORS error: origin http://localhost:5174 is not allowed[39m
+2025-11-15 11:11:20:1120 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-15 11:11:20:1120 [31merror[39m: [31mPOST /api/auth/login 500 - 1019ms[39m
+2025-11-15 11:11:26:1126 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-15 11:11:26:1126 [31merror[39m: [31mPOST /api/auth/login 500 - 197ms[39m
+2025-11-15 11:12:15:1215 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-15 11:12:15:1215 [31merror[39m: [31mPOST /api/auth/login 500 - 300ms[39m
+2025-11-21 01:49:45:4945 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-21 01:49:45:4945 [31merror[39m: [31mPOST /api/auth/login 500 - 4383ms[39m
+2025-11-21 01:50:30:5030 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-21 01:50:30:5030 [31merror[39m: [31mPOST /api/auth/login 500 - 3797ms[39m
+2025-11-21 01:50:34:5034 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-21 01:50:34:5034 [31merror[39m: [31mPOST /api/auth/login 500 - 251ms[39m

@@ -822,3 +822,98 @@
 2025-11-12 23:33:50:3350 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
 2025-11-12 23:33:50:3350 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
 2025-11-12 23:33:50:3350 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-15 11:08:39:839 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-15 11:08:39:839 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-15 11:08:39:839 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-15 11:11:20:1120 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-15 11:11:20:1120 [31merror[39m: [31mPOST /api/auth/login 500 - 1019ms[39m
+2025-11-15 11:11:26:1126 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-15 11:11:26:1126 [31merror[39m: [31mPOST /api/auth/login 500 - 197ms[39m
+2025-11-15 11:12:15:1215 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM CusrtoṁDemo\New folder\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-15 11:12:15:1215 [31merror[39m: [31mPOST /api/auth/login 500 - 300ms[39m
+2025-11-19 10:33:28:3328 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-19 10:33:28:3328 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-19 10:33:28:3328 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-19 10:36:57:3657 [33mwarn[39m: [33mPOST / 401 - 28ms[39m
+2025-11-19 10:37:13:3713 [33mwarn[39m: [33mPOST / 401 - 2ms[39m
+2025-11-19 10:37:16:3716 [33mwarn[39m: [33mPOST / 401 - 3ms[39m
+2025-11-19 10:37:17:3717 [33mwarn[39m: [33mPOST / 401 - 40ms[39m
+2025-11-19 10:37:17:3717 [33mwarn[39m: [33mPOST / 401 - 2ms[39m
+2025-11-19 10:37:18:3718 [33mwarn[39m: [33mPOST / 401 - 5ms[39m
+2025-11-19 10:38:35:3835 [33mwarn[39m: [33mPOST /login 401 - 5958ms[39m
+2025-11-19 10:42:24:4224 [33mwarn[39m: [33mPOST /login 401 - 745ms[39m
+2025-11-19 10:42:29:4229 [33mwarn[39m: [33mPOST /login 401 - 445ms[39m
+2025-11-19 10:42:49:4249 [33mwarn[39m: [33mPOST /login 401 - 506ms[39m
+2025-11-19 10:42:54:4254 [33mwarn[39m: [33mPOST /login 401 - 655ms[39m
+2025-11-21 01:36:13:3613 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-21 01:36:13:3613 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-21 01:36:13:3613 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
+2025-11-21 01:49:45:4945 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-21 01:49:45:4945 [31merror[39m: [31mPOST /api/auth/login 500 - 4383ms[39m
+2025-11-21 01:50:30:5030 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-21 01:50:30:5030 [31merror[39m: [31mPOST /api/auth/login 500 - 3797ms[39m
+2025-11-21 01:50:34:5034 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mD:\MM\backend\src\controllers\auth.controller.ts:180:36[39m
+
+[31m  177 }[39m
+[31m  178 [39m
+[31m  179 // Find user by email[39m
+[31m→ 180 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `db.kjvkfmesztykidqxsohw.supabase.co:5432`[39m
+
+[31mPlease make sure your database server is running at `db.kjvkfmesztykidqxsohw.supabase.co:5432`.[39m
+2025-11-21 01:50:34:5034 [31merror[39m: [31mPOST /api/auth/login 500 - 251ms[39m
+2025-11-21 04:25:38:2538 [32minfo[39m: [32m🚀 Server running on port 3000 in development mode[39m
+2025-11-21 04:25:38:2538 [32minfo[39m: [32m📍 Frontend URL: http://localhost:5173[39m
+2025-11-21 04:25:38:2538 [32minfo[39m: [32m🔐 Database: PostgreSQL[39m
