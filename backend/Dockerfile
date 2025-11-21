@@ -1,31 +1,45 @@
-# Use Node.js 20 LTS
-FROM node:20-slim
+# Multi-stage build for Backend
+FROM node:20-alpine AS builder
 
-# Install OpenSSL for Prisma
-RUN apt-get update -y && apt-get install -y openssl
-
-# Set working directory
 WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-COPY prisma ./prisma/
+COPY tsconfig.json ./
 
 # Install dependencies
-RUN npm install --omit=dev
+RUN npm install
 
-# Copy source code
-COPY . .
+# Copy Prisma schema
+COPY prisma ./prisma
 
 # Generate Prisma Client
 RUN npx prisma generate
 
+# Copy source code
+COPY src ./src
+
+# Build application
+RUN npm run build
+
+# Production stage
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install production dependencies
+COPY package*.json ./
+RUN npm install --production
+
+# Copy Prisma schema and generate client
+COPY prisma ./prisma
+RUN npx prisma generate
+
+# Copy built application
+COPY --from=builder /app/dist ./dist
+
 # Expose port
-EXPOSE 8080
+EXPOSE 3000
 
-# Set environment to production
-ENV NODE_ENV=production
-ENV PORT=8080
-
-# Start the application using tsx
-CMD ["npx", "tsx", "src/server.ts"]
+# Start application
+CMD ["node", "dist/server.js"]

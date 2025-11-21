@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: mahima-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: nonprofit123
+      POSTGRES_DB: nonprofit_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ 'CMD-SHELL', 'pg_isready -U postgres' ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mahima-network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mahima-backend
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: postgresql://postgres:nonprofit123@postgres:5432/nonprofit_db?schema=public
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-dev_access_secret_change_in_production}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-dev_refresh_secret_change_in_production}
+      SESSION_SECRET: ${SESSION_SECRET:-dev_session_secret_change_in_production}
+      FRONTEND_URL: http://localhost
+      CORS_ORIGIN: http://localhost
+    ports:
+      - '3000:3000'
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - mahima-network
+    restart: unless-stopped
+
+  # Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mahima-frontend
+    environment:
+      VITE_API_URL: http://localhost:3000/api
+    ports:
+      - '80:80'
+    depends_on:
+      - backend
+    networks:
+      - mahima-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  mahima-network:
+    driver: bridge
